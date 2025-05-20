@@ -1,0 +1,25 @@
+.home-container {
+    color: #fff;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Times New Roman';
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    height: 50px;
+    background-image: url(assets/logo_2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.text {
+    display: flex;
+    color: #fff;
+    font-family: 'Times New Roman';
+}
