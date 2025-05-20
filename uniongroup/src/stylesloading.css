@@ -40,7 +40,20 @@
     margin-top: 5%;
     font-size: 80px;
     opacity: 0;
-    animation: scale-in 1.2s ease-out forwards;
+    animation: scale-in 1.2s ease-out forwards,
+      blink 0.7s infinite 1.2s;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .year-text {
