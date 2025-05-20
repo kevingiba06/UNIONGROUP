@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+import logo from './assets/logo_footer_2.svg';
 import './App.css';
-import fondo from './assets/fondo.jpg'; // Asegúrate de agregar tu imagen en `src/assets`
+import fondo from './src/assets/fondo.jpg'; // Asegúrate de agregar tu imagen en `src/assets`
  
 function App() {
   return (
