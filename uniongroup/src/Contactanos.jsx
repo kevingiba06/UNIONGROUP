@@ -1,8 +1,8 @@
 import React from 'react';
-import './styleshome.css';
 import { Link } from 'react-router-dom';
+import './contacto.css';
 
-function HomePage() {
+function Contacto() {
     return (
         <div className="home-container">
             <div className='logo-text'>
@@ -11,11 +11,11 @@ function HomePage() {
                     <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
                     <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
                     <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
-                    <Link to={"/contacto"}>CONTACTO</Link>
+                    <Link to={"/"}>REGRESAR</Link>
                 </div>
             </div>
         </div>
     );
 }
 
-export default HomePage;
+export default Contacto;
