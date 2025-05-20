@@ -10,7 +10,7 @@ function LoadingPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/home');
-    }, 8000); // Espera 8 segundos antes de redirigir
+    }, 2500); // Espera 2.5 segundos antes de redirigir
 
     return () => clearTimeout(timer);
   }, [navigate]);

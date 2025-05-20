@@ -1,0 +1,43 @@
+.home-container {
+    color: #fff;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Open Sans';
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    height: 50px;
+    background-image: url(assets/logo_2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.text {
+  display: flex;
+  gap: 60px; /* ← espacio entre los <a> */
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.text a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.text a:hover {
+  color: #537e5f;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    /* Espacio entre logo y texto */
+}
