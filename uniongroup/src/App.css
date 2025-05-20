@@ -44,3 +44,10 @@
     /* Volver al tamaño original */
   }
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000000; /* ← el color que quieras */
+}
