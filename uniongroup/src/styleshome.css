@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .home-container {
     color: #fff;
     width: auto;
@@ -5,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Open Sans';
+    font-family: 'Monserrat',sans-serif;
 }
 
 .logo {
@@ -19,6 +21,7 @@
 }
 
 .text {
+  font-family:'Monserrat',sans-serif;
   display: flex;
   width: auto;
   gap: 60px; /* ← espacio entre los <a> */
@@ -43,3 +46,17 @@
     gap: 150px;
     /* Espacio entre logo y texto */
 }
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+

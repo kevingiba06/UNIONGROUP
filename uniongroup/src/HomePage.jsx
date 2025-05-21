@@ -1,6 +1,7 @@
 import React from 'react';
 import './styleshome.css';
 import { Link } from 'react-router-dom';
+import sampleImage from './assets/fondojlo.jpg';
 
 function HomePage() {
     return (
@@ -14,8 +15,14 @@ function HomePage() {
                     <Link to={"/contacto"}>CONTACTO</Link>
                 </div>
             </div>
+
+            {/* Nuevo contenedor para la imagen */}
+            <div className="image-container">
+                <img src={sampleImage} alt="Imagen de muestra" className="home-image" />
+            </div>
         </div>
     );
 }
 
 export default HomePage;
+

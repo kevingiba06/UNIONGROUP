@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_2" data-name="Layer 2" viewBox="0 0 172.23 38.22">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: .72;
+      }
+
+      .cls-4 {
+        fill: gray;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="172.23" height="38.22"></rect>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-2">
+      <g class="cls-3">
+        <polygon class="cls-4" points="172.23 38.22 147.03 14.82 147.03 36.72 140.57 36.72 140.57 0 165.76 23.39 165.76 1.12 172.23 1.12 172.23 38.22"></polygon>
+        <polygon class="cls-4" points="71.73 38.22 46.53 14.82 46.53 36.72 40.06 36.72 40.06 0 65.26 23.39 65.26 1.12 71.73 1.12 71.73 38.22"></polygon>
+        <rect class="cls-4" x="81.45" y="1.2" width="6.46" height="35.52"></rect>
+        <path class="cls-4" d="m114.34,37.74c-10.36,0-18.79-8.43-18.79-18.79S103.98.17,114.34.17s18.79,8.43,18.79,18.79-8.43,18.79-18.79,18.79m0-31.13c-6.8,0-12.34,5.54-12.34,12.34s5.54,12.34,12.34,12.34,12.34-5.54,12.34-12.34-5.54-12.34-12.34-12.34"></path>
+        <path class="cls-4" d="m24.31,1.2v21.15c0,4.92-4,8.93-8.93,8.93s-8.92-4.01-8.92-8.93V1.2H0v21.16H0C0,30.84,6.9,37.74,15.38,37.74s15.38-6.9,15.38-15.38h0V1.2h-6.46Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
