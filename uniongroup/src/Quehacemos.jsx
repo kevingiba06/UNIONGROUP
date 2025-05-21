@@ -14,8 +14,8 @@ function Quehacemos() {
           <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
           <Link to={"/contacto"}>CONTACTO</Link>
           <Link to={"/"}>
-          <img src={backIcon} alt="Regresar" className="icon-svg" /></Link>
-
+            <img src={backIcon} alt="Regresar" className="icon-svg" />
+          </Link>
         </div>
       </div>
     </div>
