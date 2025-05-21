@@ -1,37 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .home-container {
-    color: #fff;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Monserrat',sans-serif;
+  color: #fff;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
 }
 
 .logo {
-    display: flex;
-    width: 120px;
-    height: 50px;
-    background-image: url(assets/logo_2.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  display: flex;
+  width: 120px;
+  height: 60px;
+  background-image: url(assets/logo_2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .text {
-  font-family:'Monserrat',sans-serif;
+  font-family: 'Tahoma';
   display: flex;
   width: auto;
-  gap: 60px; /* ← espacio entre los <a> */
+  gap: 60px;
+  /* ← espacio entre los <a> */
   color: #fff;
-  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .text a {
   color: white;
   text-decoration: none;
+  font-size: 22.5px;
   transition: color 0.3s ease;
 }
 
@@ -40,12 +43,13 @@
 }
 
 .logo-text {
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 150px;
-    /* Espacio entre logo y texto */
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 150px;
+  /* Espacio entre logo y texto */
 }
+
 .image-container {
   position: relative;
   width: 100vw;
@@ -60,3 +64,60 @@
   display: block;
 }
 
+.info {
+  font-family: 'Tahoma';
+  display: block;
+  width: auto;
+  color: #fff;
+  font-size: 40px;
+}
+
+.email {
+  font-family: 'Tahoma';
+  display: block;
+  width: auto;
+  color: #fff;
+  font-size: 20px;
+}
+
+.year {
+  font-size: 15px;
+  font-weight: bold;;
+  color: #fff;
+}
+
+.logo2_1 {
+  width: 70px;
+  height: 70px;
+  background-image: url(assets/logo_2_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.years-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.info-email-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  gap: 90px;
+  /* Espacio entre logo y texto */
+}
+
+.police {
+  display: flex;
+  flex-direction: column;
+  /* ← Apila los hijos verticalmente */
+  align-items: center;
+  /* ← Centra horizontalmente */
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 14px;
+}
