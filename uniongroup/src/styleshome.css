@@ -20,6 +20,7 @@
 
 .text {
   display: flex;
+  width: auto;
   gap: 60px; /* ← espacio entre los <a> */
   color: #fff;
   font-size: 1.5rem;
@@ -38,6 +39,7 @@
 .logo-text {
     display: flex;
     align-items: center;
+    width: auto;
     gap: 150px;
     /* Espacio entre logo y texto */
 }
