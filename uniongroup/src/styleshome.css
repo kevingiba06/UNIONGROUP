@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Monserrat',sans-serif;
 }
 
 .logo {
@@ -21,10 +21,11 @@
 }
 
 .text {
+  font-family:'Monserrat',sans-serif;
   display: flex;
   gap: 60px; /* ← espacio entre los <a> */
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .text a {
@@ -43,3 +44,17 @@
     gap: 150px;
     /* Espacio entre logo y texto */
 }
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
