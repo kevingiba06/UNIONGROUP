@@ -50,18 +50,31 @@
   /* Espacio entre logo y texto */
 }
 
-.image-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
 .home-image {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  opacity: 0;
+  animation: fadeSlideshow 12s infinite;
+}
+
+.home-image:nth-child(1) {
+  animation-delay: 0s;
+}
+.home-image:nth-child(2) {
+  animation-delay: 4s;
+}
+.home-image:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fadeSlideshow {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  30% { opacity: 1; }
+  38% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .info {

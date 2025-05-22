@@ -28,16 +28,16 @@ function Quehacemos() {
           Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
         </div>
         <div className='title'>
-          M
+          Misión
         </div>
         <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
+          Ser el portafolio de marcas más importante para nuestros socios y clientes.
         </div>
         <div className='title'>
-          V
+          Visión
         </div>
         <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
+          Asegurar resultados que cumplan con las necesidades del mercado y la promesa de cada marca.
         </div>
       </div>
 
