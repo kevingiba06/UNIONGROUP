@@ -38,25 +38,37 @@
 }
 
 .loading-text {
-    margin-top: 5%;
-    font-size: 80px;
-    opacity: 0;
-    animation: scale-in 1.2s ease-out forwards,
-      blink 0.7s infinite 1.2s;
+  display: flex;
+  gap: 8px;
+  font-size: 3rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 1;
-    }
+.loading-text span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: fadeInLetter 1s forwards;
 }
 
+.loading-text span:nth-child(1) { animation-delay: 0.1s; }
+.loading-text span:nth-child(2) { animation-delay: 0.2s; }
+.loading-text span:nth-child(3) { animation-delay: 0.3s; }
+.loading-text span:nth-child(4) { animation-delay: 0.4s; }
+.loading-text span:nth-child(5) { animation-delay: 0.5s; }
+.loading-text span:nth-child(6) { animation-delay: 0.6s; }
+.loading-text span:nth-child(7) { animation-delay: 0.7s; }
+.loading-text span:nth-child(8) { animation-delay: 0.8s; }
+.loading-text span:nth-child(9) { animation-delay: 0.9s; }
+.loading-text span:nth-child(10){ animation-delay: 1.0s; }
+
+@keyframes fadeInLetter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .year-text {
     font-size: 35px;
     font-weight: bold;
@@ -79,5 +91,8 @@
     transform: scale(1);
   }
   
+  
 
 }
+
+

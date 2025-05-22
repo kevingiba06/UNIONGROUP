@@ -49,3 +49,53 @@
   margin-right: 8px;
   vertical-align: middle;
 }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  /* ← Apila los hijos verticalmente */
+  align-items: center;
+  /* ← Centra horizontalmente */
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.title {
+  display: flex;
+  font-size: 30px;
+  color: #fff;
+  margin: 2%;
+}
+
+.info {
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+}
+
+.years-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.info-email-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  gap: 90px;
+  /* Espacio entre logo y texto */
+}
+
+.police {
+  display: flex;
+  flex-direction: column;
+  /* ← Apila los hijos verticalmente */
+  align-items: center;
+  /* ← Centra horizontalmente */
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 14px;
+}

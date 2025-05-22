@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import logo from './logo_footer_2.svg';
 import './stylesloading.css';
 
+
 function LoadingPage() {
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear(); // Año actual
@@ -22,7 +23,9 @@ function LoadingPage() {
         <img src={logo} className="loading-logo" alt="Cargando..." />
         <span className="year-text">{currentYear}</span>
       </div>
-      <p className="loading-text">UNION GROUP</p>
+       <h1 class="loading-text">
+  <span>U</span><span>N</span><span>I</span><span>O</span><span>N</span><span>G</span><span>R</span><span>O</span><span>U</span><span>P</span>
+</h1>
     </div>
   );
 }

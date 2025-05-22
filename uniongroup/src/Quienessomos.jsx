@@ -18,28 +18,6 @@ function Quienessomos() {
           </Link>
         </div>
       </div>
-
-      <div className='center'>
-        <div className='title'>
-          QUE HACEMOS
-        </div>
-        <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
-        </div>
-        <div className='title'>
-          M
-        </div>
-        <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
-        </div>
-        <div className='title'>
-          V
-        </div>
-        <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
-        </div>
-      </div>
-
       <div className='info-email-logo'>
         <div className='info'>
           <p>Alianzas globales, relaciones sólidas</p>
