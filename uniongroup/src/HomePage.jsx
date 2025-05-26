@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import fondoJlo from './assets/fondojlo.jpg';
 import billabong from './assets/BILLABONG.jpg';
 import imagen3 from './assets/rox.jpg';
+import logo_billa from './assets/logo_billabong.svg';
+import logo_roxy from './assets/logo_roxy.svg';
+import logo_jlo from './assets/logo_jlo.svg';
+import logo_reebok from './assets/logo_reebok.svg';
 
 const slides = [
     { src: fondoJlo, texto: "Una Marca Es Una Promesa", botonTexto: "JLO BY JENNIFER LOPEZ" },   // <-- agregado botonTexto
@@ -53,6 +57,14 @@ function HomePage() {
 
                     </div>
                 ))}
+
+                <div className='svg-carousel'>
+                    <div className='carousel-track'>
+                        {[logo_billa, logo_roxy, logo_jlo, logo_reebok].map((logo, index) => (
+                            <img key={index} src={logo} alt={`logo-${index}`} className="carousel-logo"/>
+                        ))}
+                    </div>
+                </div>
             </div>
 
             <div className='info-email-logo'>
