@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import fondoJlo from './assets/fondojlo.jpg';
 import billabong from './assets/BILLABONG.jpg';
 import imagen3 from './assets/rox.jpg';
+import reebok from './assets/reebokhome.jpg';
 
 const slides = [
     { src: fondoJlo, texto: "Una Marca Es Una Promesa", botonTexto: "JLO BY JENNIFER LOPEZ" },   // <-- agregado botonTexto
     { src: billabong, texto: "Una Marca Es Una Promesa", botonTexto: "BILLABONG" },      // <-- agregado botonTexto
-    { src: imagen3, texto: "Una Marca Es Una Promesa", botonTexto: "ROX BRAND" },                 // <-- agregado botonTexto
+    { src: imagen3, texto: "Una Marca Es Una Promesa", botonTexto: "ROX BRAND" },
+    { src: reebok, texto: "Una Marca Es Una Promesa", botonTexto: "REEBOK" },                 // <-- agregado botonTexto
 ];
 
 
