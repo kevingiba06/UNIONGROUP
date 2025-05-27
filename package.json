@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kevingiba06/UNIONGROUP/issues"
   },
-  "homepage": "https://github.com/kevingiba06/UNIONGROUP#readme"
+  "homepage": "https://github.com/kevingiba06/UNIONGROUP#readme",
+  "dependencies": {
+    "uniongroup": "file:"
+  }
 }

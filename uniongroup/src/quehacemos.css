@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .home-container {
-    color: #fff;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .logo {
-    display: flex;
-    width: 120px;
-    height: 50px;
-    background-image: url(assets/logo_2.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  display: flex;
+  width: 120px;
+  height: auto;
+  background-image: url(assets/logo_2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .text {
   display: flex;
-  gap: 60px; /* ← espacio entre los <a> */
+  gap: 60px;
+  /* ← espacio entre los <a> */
   color: #fff;
   font-size: 1.5rem;
 }
@@ -38,14 +40,15 @@
 }
 
 .logo-text {
-    display: flex;
-    align-items: center;
-    gap: 150px;
-    /* Espacio entre logo y texto */
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  /* Espacio entre logo y texto */
 }
+
 .icon-svg {
   width: 20px;
-  height: 20px;
+  height: auto;
   margin-right: 8px;
   vertical-align: middle;
 }
@@ -57,20 +60,23 @@
   align-items: center;
   /* ← Centra horizontalmente */
   justify-content: center;
-  margin-top: 3%;
+  margin-top: 0%;
+  background-color: #808080;
 }
 
 .title {
   display: flex;
-  font-size: 30px;
+  font-size: 540%;
   color: #fff;
   margin: 2%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .info {
   display: flex;
-  font-size: 20px;
+  font-size: 180%;
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .years-logo-container {

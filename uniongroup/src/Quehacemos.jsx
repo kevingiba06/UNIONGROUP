@@ -21,21 +21,22 @@ function Quehacemos() {
         </div>
       </div>
         <div className='center'>
-        <div className='title'>
-          QUE HACEMOS
+        <h1 className='title'>
+          Que hacemos
+        </h1>
+        <div className='subtitle'>
+          Gestión de Marcas Globales,<br></br>
+          Desarrollo y diseño de productos, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
         </div>
-        <div className='info'>
-          Gestión de Marcas Globales, Desarrollo y diseño de producto, Sourcing, Licencias, Marketing y Ventas a través de tiendas , e-commerce y wholesale
-        </div>
-        <div className='title'>
+        <h2 className='subtitle'>
           Misión
-        </div>
+        </h2>
         <div className='info'>
           Ser el portafolio de marcas más importante para nuestros socios y clientes.
         </div>
-        <div className='title'>
+        <h2 className='subtitle'>
           Visión
-        </div>
+        </h2>
         <div className='info'>
           Asegurar resultados que cumplan con las necesidades del mercado y la promesa de cada marca.
         </div>
