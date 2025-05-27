@@ -230,7 +230,7 @@
   z-index: 5;
   display: flex;
   justify-content: center;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .carousel-track {

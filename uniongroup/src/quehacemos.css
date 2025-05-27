@@ -64,9 +64,36 @@
   background-color: #808080;
 }
 
+.center2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.center3 {
+  display: flex;
+  flex-direction: row;
+  /* ← Apila los hijos verticalmente */
+  align-items: center;
+  /* ← Centra horizontalmente */
+  justify-content: center;
+  margin-top: 0%;
+  background-color: #808080;
+}
+
 .title {
   display: flex;
   font-size: 540%;
+  color: #fff;
+  margin: 2%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+  display: flex;
+  font-size: 450%;
   color: #fff;
   margin: 2%;
   font-family: 'Montserrat', sans-serif;
@@ -104,4 +131,17 @@
   justify-content: center;
   margin-top: 20%;
   font-size: 14px;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: row;
+  /* Alinea horizontalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  flex-wrap: wrap;
+  /* Permite que se muevan a la siguiente línea si no caben */
+  gap: 20px;
+  /* Espaciado entre botones */
+  margin-top: 20px;
 }

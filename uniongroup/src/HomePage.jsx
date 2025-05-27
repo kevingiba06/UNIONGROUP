@@ -36,6 +36,27 @@ const slides = [
 function HomePage() {
     const currentYear = new Date().getFullYear();
     const [currentIndex, setCurrentIndex] = useState(0);
+    const logosConLinks = [
+        { logo: logo_billa, url: 'https://www.billabong.com/' },
+        { logo: logo_roxy, url: 'https://www.roxy.com' },
+        { logo: logo_jlo, url: 'https://www.coppel.com/jennifer-lopez' },
+        { logo: logo_reebok, url: 'https://www.reebok.mx/' },
+        { logo: logo_members, url: 'https://membersonly.com/?srsltid=AfmBOooWCoqlp3cb10_EFUnchiRN3SksewJaDV50wj67fbbG3VPxLBfn' },
+        { logo: logo_nautica, url: 'https://nauticamexico.com/?srsltid=AfmBOooY1zCZ_s0-B8gnsORyl0yRRtOQaqPEC0-5gWK8I0IZWYpspzsK' },
+        { logo: logo_polo, url: 'https://www.coppel.com/york-team-polo-club' },
+        { logo: logo_umbro, url: 'https://www.umbro.com/es/' },
+        { logo: logo_jeep, url: 'https://www.jeep-outfitter.com/es_es' },
+        { logo: logo_rvca, url: 'https://www.rvca.com/?srsltid=AfmBOoqWGM-hcyKc7AgrkWr-61r2DBq4svbVgHd58ZuF57PDqWAYu5l5' },
+        { logo: logo_dc, url: 'https://dcshoes.mx/?gad_source=1&gad_campaignid=22331569632&gbraid=0AAAAA-bjNF6NzEnFgTKqIJeARzGNRTn6f&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6g06kUQSM9D5Guf38bLgXQDNGg8C2K7vnVfRZiN_WcNajviRbQRs78aAgk4EALw_wcB' },
+        { logo: logo_quicksilver, url: 'https://www.quiksilver.com/' },
+        { logo: logo_marvel, url: 'https://marvel.com' },
+        { logo: logo_disney, url: 'https://disney.com' },
+        { logo: logo_brook, url: 'https://www.brookstone.com/?srsltid=AfmBOoozHpln3v7gbJhrQ-HeTBlr7epk8wBs04DJ_AXd60uD0SP1pOnR' },
+        { logo: logo_helys, url: 'https://heelys.com/pages/mexico?srsltid=AfmBOorfYRog2uNPlh9o5jQ7cj63OUC3IcVIu1FyeuPVXSstgT2hZRur' },
+        { logo: logo_altec, url: 'https://www.alteclansing.com/collections/speakers?srsltid=AfmBOoqjFsu20_zJCSHP72PGcdbnU0mEpDYYOXe35S64zZqkuwcWWrnn' },
+        { logo: logo_shaq, url: 'https://shaq.com/pages/shaq-footwear' },
+        { logo: logo_cat, url: 'https://catfootwear.com.mx/?gad_source=1&gad_campaignid=21351108413&gbraid=0AAAAAoMoTsjrd2Qu9P7fM1NS666GVQA_E&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6gEqTm5BTdi91r1Fkh9tAJ6ff_T0c89mfl3xtJzxUuP2HRVmduR6TkaAgTGEALw_wcB' },
+    ];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -70,7 +91,7 @@ function HomePage() {
                         {index === currentIndex && (
                             <>
                                 <div className="brand-button">{slide.botonTexto}</div>
-                                                                {/* Íconos dinámicos por slide */}
+                                {/* Íconos dinámicos por slide */}
                                 {slide.icons && slide.icons.map((icon, i) => (
                                     <img
                                         key={i}
@@ -87,9 +108,10 @@ function HomePage() {
 
                 <div className='svg-carousel'>
                     <div className='carousel-track'>
-                        {[logo_billa, logo_roxy, logo_jlo, logo_reebok, logo_members, logo_nautica, logo_polo, logo_umbro, logo_jeep, logo_rvca, logo_dc, logo_quicksilver, logo_marvel, logo_disney, logo_brook, logo_helys, logo_altec, logo_shaq, logo_cat,
-                        logo_billa, logo_roxy, logo_jlo, logo_reebok, logo_members, logo_nautica, logo_polo, logo_umbro, logo_jeep, logo_rvca, logo_dc, logo_quicksilver, logo_marvel, logo_disney, logo_brook, logo_helys, logo_altec, logo_shaq, logo_cat].map((logo, index) => (
-                            <img key={index} src={logo} alt={`logo-${index}`} className="carousel-logo" />
+                        {logosConLinks.concat(logosConLinks).map((item, index) => (
+                            <a key={index} href={item.url} target='_blank' rel='noopener noreferrer'>
+                                <img src={item.logo} alt={`logo-${index}`} className="carousel-logo" />
+                            </a>
                         ))}
                     </div>
                 </div>
