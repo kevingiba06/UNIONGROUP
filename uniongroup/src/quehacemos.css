@@ -71,6 +71,7 @@
   justify-content: center;
   background-color: #fff;
   font-weight: bolder;
+  white-space: pre-line;
 }
 
 .center3 {
@@ -171,7 +172,11 @@
   /* Centra horizontalmente */
   flex-wrap: wrap;
   /* Permite que se muevan a la siguiente línea si no caben */
-  gap: 20px;
+  gap: 80px;
   /* Espaciado entre botones */
+  margin-top: 20px;
+}
+
+.contenido-seleccionado {
   margin-top: 20px;
 }

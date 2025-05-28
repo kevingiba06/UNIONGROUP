@@ -24,6 +24,8 @@ import logo_helys from './assets/logo_helys.svg';
 import logo_altec from './assets/logo_altec.svg';
 import logo_shaq from './assets/logo_shaq.svg';
 import logo_cat from './assets/logo_cat.svg';
+import logo_board from './assets/LOGO_BOARD.svg';
+import logo_aero from './assets/AEROPOSTALE.svg';
 
 const slides = [
     { src: fondoJlo, texto: "Una Marca Es Una Promesa", botonTexto: "JLO BY JENNIFER LOPEZ", icons: [logo_jlo] },   // <-- agregado botonTexto
@@ -56,6 +58,8 @@ function HomePage() {
         { logo: logo_altec, url: 'https://www.alteclansing.com/collections/speakers?srsltid=AfmBOoqjFsu20_zJCSHP72PGcdbnU0mEpDYYOXe35S64zZqkuwcWWrnn' },
         { logo: logo_shaq, url: 'https://shaq.com/pages/shaq-footwear' },
         { logo: logo_cat, url: 'https://catfootwear.com.mx/?gad_source=1&gad_campaignid=21351108413&gbraid=0AAAAAoMoTsjrd2Qu9P7fM1NS666GVQA_E&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6gEqTm5BTdi91r1Fkh9tAJ6ff_T0c89mfl3xtJzxUuP2HRVmduR6TkaAgTGEALw_wcB' },
+        { logo: logo_board, url: 'https://www.boardriders.eu'},
+        { logo: logo_aero, url: 'https://www.aeropostale.com/?srsltid=AfmBOoqrCatki6WuMIDuTYdrA_T5oKpcWs5N7YqYHC5L1IexrmRjJlTv'},
     ];
 
     useEffect(() => {

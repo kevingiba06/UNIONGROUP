@@ -11,6 +11,10 @@ import logo_rbk from './assets/logo_reebok.svg';
 import logo_dc from './assets/logo_dc.svg';
 import logo_rxy from './assets/logo_roxy.svg';
 import logo_bbong from './assets/logo_billabong.svg';
+import logo_board from './assets/LOGO_BOARD.svg';
+import des_y_dis from './assets/DESARROLLO Y DISEÑO.jpg';
+import board from './assets/TIENDA_BOARD.jpg';
+import tndreebok from './assets/tienda_REEBOK.jpg';
 
 function Quehacemos() {
   const currentYear = new Date().getFullYear();
@@ -18,22 +22,36 @@ function Quehacemos() {
 
   const opciones = [
     {
-      titulo: "Marcas Globales",
+      titulo: "Marcas \nGlobales",
       descripcion: "Management y Gestión de Marcas Internacionales distribuyendo y desarrollando productos de alta calidad.",
       imagenes: [
-        { img: rbk, logo: logo_rbk },
-        { img: dc, logo: logo_dc },
-        { img: rxy, logo: logo_rxy },
-        { img: bbong, logo: logo_bbong },
+        { img: rbk, logo: logo_rbk, link: "https://www.reebok.mx/" },
+        { img: dc, logo: logo_dc, link: "https://dcshoes.mx/?gad_source=1&gad_campaignid=22331569632&gbraid=0AAAAA-bjNF6NzEnFgTKqIJeARzGNRTn6f&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6g06kUQSM9D5Guf38bLgXQDNGg8C2K7vnVfRZiN_WcNajviRbQRs78aAgk4EALw_wcB" },
+        { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" },
+        { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" },
       ]
     },
-    { titulo: "Desarrollo y Diseño", descripcion: "" },
     {
-      titulo: "Ventas",
-      descripcion: "Gestionamos ventas al por mayor, e-commerce y tiendas físicas.",
+      titulo: "Desarrollo \ny Diseño",
+      imagen: des_y_dis
+    },
+    {
+      titulo: "Sourcing",
       imagen: mapa_union
     },
-    { titulo: "Sourcing", descripcion: "Identificamos y gestionamos proveedores confiables globalmente." }
+    {
+      titulo: "Realciones \nEstratégicas",
+      imagenes: [],
+      descripcion: "Identificamos y gestionamos proveedores confiables globalmente."
+    },
+    {
+      titulo: "Retail",
+      descripcion: "",
+      imagenes: [
+        { img: board, logo: logo_board, link: "https://www.boardriders.eu" },
+        { img: tndreebok, logo: logo_rbk, link: "https://www.reebok.mx/" },
+      ]
+    }
   ];
 
   return (
@@ -95,7 +113,7 @@ function Quehacemos() {
       <div className='center3'>
         <div className='info'>
           {seleccion && (
-            <div className="contenido-seleccionado" style={{ marginTop: '20px' }}>
+            <div className="contenido-seleccionado">
               <h3>{seleccion.titulo}</h3>
               <p>{seleccion.descripcion}</p>
             </div>
@@ -109,16 +127,18 @@ function Quehacemos() {
             <div className="imagenes-seleccion">
               {seleccion.imagenes.map((item, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>
-                  <img
-                    src={item.img}
-                    alt={`${seleccion.titulo} ${i}`}
-                    className="imagen-seleccion"
-                  />
-                  <img
-                    src={item.logo}
-                    alt={`Logo ${i}`}
-                    style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
-                  />
+                  <a href={item.link} target='_blank' rel='noopener noreferrer'>
+                    <img
+                      src={item.img}
+                      alt={`${seleccion.titulo} ${i}`}
+                      className="imagen-seleccion"
+                    />
+                    <img
+                      src={item.logo}
+                      alt={`Logo ${i}`}
+                      style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
+                    />
+                  </a>
                 </div>
               ))}
             </div>
