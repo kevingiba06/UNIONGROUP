@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link
+import { Link } from 'react-router-dom';
 import './quehacemos.css';
 import backIcon from './assets/icons8-atras-48.png';
 import mapa_union from './assets/mapa_union.jpg';
-
-
+import rbk from './assets/rbk.png';
+import dc from './assets/dc.png';
+import bbong from './assets/bbong.png';
+import rxy from './assets/rxy.png';
+import logo_rbk from './assets/logo_reebok.svg';
+import logo_dc from './assets/logo_dc.svg';
+import logo_rxy from './assets/logo_roxy.svg';
+import logo_bbong from './assets/logo_billabong.svg';
 
 function Quehacemos() {
   const currentYear = new Date().getFullYear();
@@ -12,11 +18,16 @@ function Quehacemos() {
 
   const opciones = [
     {
-      titulo: "Diseño",
-      descripcion: "Creamos conceptos de productos que se adaptan al mercado y tendencias actuales.",
-      imagen: "#"
+      titulo: "Marcas Globales",
+      descripcion: "Management y Gestión de Marcas Internacionales distribuyendo y desarrollando productos de alta calidad.",
+      imagenes: [
+        { img: rbk, logo: logo_rbk },
+        { img: dc, logo: logo_dc },
+        { img: rxy, logo: logo_rxy },
+        { img: bbong, logo: logo_bbong },
+      ]
     },
-    { titulo: "Marketing", descripcion: "Desarrollamos campañas enfocadas en la identidad de cada marca." },
+    { titulo: "Desarrollo y Diseño", descripcion: "" },
     {
       titulo: "Ventas",
       descripcion: "Gestionamos ventas al por mayor, e-commerce y tiendas físicas.",
@@ -38,31 +49,27 @@ function Quehacemos() {
           </Link>
         </div>
       </div>
+
       <div className='center'>
-        <h1 className='title'>
-          Que hacemos
-        </h1>
+        <h1 className='title'>Que hacemos</h1>
         <div className='info'>
           Gestión de Marcas Globales, Desarrollo<br />
           y diseño de productos, Sourcing,<br />
           Licencias, Marketing y Ventas a través<br />
           de tiendas , e-commerce y wholesale
         </div>
-        <h2 className='title'>
-          Misión
-        </h2>
+        <h2 className='title'>Misión</h2>
         <div className='info'>
           Ser el portafolio de marcas más importante<br />
           para nuestros socios y clientes.
         </div>
-        <h2 className='title'>
-          Visión
-        </h2>
+        <h2 className='title'>Visión</h2>
         <div className='info'>
           Asegurar resultados que cumplan con las necesidades<br />
           del mercado y la promesa de cada marca.
         </div>
       </div>
+
       <div className='center2'>
         <div className='subtitle'>
           <div className="selector-container">
@@ -70,11 +77,12 @@ function Quehacemos() {
               <div
                 key={index}
                 className="selector-opcion"
-                onClick={() => setSeleccion(item)} // Al hacer clic, cambia el estado
+                onClick={() => setSeleccion(item)}
                 style={{
                   cursor: 'pointer',
                   margin: '5px',
                   color: '#537e5f',
+                  fontSize: '40px',
                 }}
               >
                 {item.titulo}
@@ -93,17 +101,36 @@ function Quehacemos() {
             </div>
           )}
         </div>
-        <div className='image'>
-          {seleccion && seleccion.imagen && (
+      </div>
+
+      {seleccion && (
+        <>
+          {seleccion.imagenes ? (
+            <div className="imagenes-seleccion">
+              {seleccion.imagenes.map((item, i) => (
+                <div key={i} style={{ textAlign: 'center' }}>
+                  <img
+                    src={item.img}
+                    alt={`${seleccion.titulo} ${i}`}
+                    className="imagen-seleccion"
+                  />
+                  <img
+                    src={item.logo}
+                    alt={`Logo ${i}`}
+                    style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : seleccion.imagen ? (
             <img
               src={seleccion.imagen}
               alt={seleccion.titulo}
               className="imagen-seleccion"
-              style={{ maxWidth: '300px', height: 'auto', borderRadius: '10px' }}
             />
-          )}
-        </div>
-      </div>
+          ) : null}
+        </>
+      )}
 
       <div className='info-email-logo'>
         <div className='info'>
@@ -122,11 +149,6 @@ function Quehacemos() {
         </div>
       </div>
     </div>
-
-
-
-
-
   );
 }
 
