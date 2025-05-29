@@ -15,11 +15,21 @@ import logo_board from './assets/LOGO_BOARD.svg';
 import des_y_dis from './assets/DESARROLLO Y DISEÑO.jpg';
 import board from './assets/TIENDA_BOARD.jpg';
 import tndreebok from './assets/tienda_REEBOK.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import { useEffect } from 'react';
 
 function Quehacemos() {
   const currentYear = new Date().getFullYear();
-  const [seleccion, setSeleccion] = useState(null);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  // Duración de la animación en milisegundos
+      once: false      // Solo se anima una vez
+    });
+  }, []);
 
+  const [seleccion, setSeleccion] = useState(null);
   const opciones = [
     {
       titulo: "Marcas \nGlobales",
@@ -33,7 +43,12 @@ function Quehacemos() {
     },
     {
       titulo: "Desarrollo \ny Diseño",
-      imagen: des_y_dis
+      imagen: des_y_dis,
+      style: {
+        width: '100%',
+        height: 'auto',
+        objectFit: 'contain'
+      }
     },
     {
       titulo: "Sourcing",
@@ -50,7 +65,12 @@ function Quehacemos() {
       imagenes: [
         { img: board, logo: logo_board, link: "https://www.boardriders.eu" },
         { img: tndreebok, logo: logo_rbk, link: "https://www.reebok.mx/" },
-      ]
+      ],
+            style: {
+        width: '100%',
+        height: 'auto',
+        objectFit: 'contain'
+      }
     }
   ];
 
@@ -68,33 +88,33 @@ function Quehacemos() {
         </div>
       </div>
 
-      <div className='center'>
-        <h1 className='title'>Que hacemos</h1>
-        <div className='info'>
+      <div className='center' data-aos="fade-up">
+        <h1 className='title' data-aos="fade-up">Que hacemos</h1>
+        <div className='info' data-aos="fade-up">
           Gestión de Marcas Globales, Desarrollo<br />
           y diseño de productos, Sourcing,<br />
           Licencias, Marketing y Ventas a través<br />
           de tiendas , e-commerce y wholesale
         </div>
-        <h2 className='title'>Misión</h2>
-        <div className='info'>
+        <h2 className='title' data-aos="fade-up">Misión</h2>
+        <div className='info' data-aos="fade-up">
           Ser el portafolio de marcas más importante<br />
           para nuestros socios y clientes.
         </div>
-        <h2 className='title'>Visión</h2>
-        <div className='info'>
+        <h2 className='title' data-aos="fade-up">Visión</h2>
+        <div className='info' data-aos="fade-up">
           Asegurar resultados que cumplan con las necesidades<br />
           del mercado y la promesa de cada marca.
         </div>
       </div>
 
-      <div className='center2'>
-        <div className='subtitle'>
-          <div className="selector-container">
+      <div className='center2' data-aos="fade-up">
+        <div className='subtitle' data-aos="fade-up">
+          <div className="selector-container" data-aos="fade-up">
             {opciones.map((item, index) => (
               <div
                 key={index}
-                className="selector-opcion"
+                className="selector-opcion" data-aos="fade-up"
                 onClick={() => setSeleccion(item)}
                 style={{
                   cursor: 'pointer',
@@ -110,10 +130,10 @@ function Quehacemos() {
         </div>
       </div>
 
-      <div className='center3'>
-        <div className='info'>
+      <div className='center3' data-aos="fade-up">
+        <div className='info' data-aos="fade-up">
           {seleccion && (
-            <div className="contenido-seleccionado">
+            <div className="contenido-seleccionado" data-aos="fade-up">
               <h3>{seleccion.titulo}</h3>
               <p>{seleccion.descripcion}</p>
             </div>
@@ -124,14 +144,14 @@ function Quehacemos() {
       {seleccion && (
         <>
           {seleccion.imagenes ? (
-            <div className="imagenes-seleccion">
+            <div className="imagenes-seleccion" data-aos="fade-up">
               {seleccion.imagenes.map((item, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>
                   <a href={item.link} target='_blank' rel='noopener noreferrer'>
                     <img
                       src={item.img}
                       alt={`${seleccion.titulo} ${i}`}
-                      className="imagen-seleccion"
+                      className="imagen-seleccion" data-aos="fade-up"
                     />
                     <img
                       src={item.logo}
@@ -146,13 +166,14 @@ function Quehacemos() {
             <img
               src={seleccion.imagen}
               alt={seleccion.titulo}
-              className="imagen-seleccion"
+              className="imagen-seleccion" data-aos="fade-up"
+              style={seleccion.style}
             />
           ) : null}
         </>
       )}
 
-      <div className='info-email-logo'>
+      <div className='info-email-logo' data-aos="fade-up">
         <div className='info'>
           <p>Alianzas globales, relaciones sólidas</p>
         </div>
