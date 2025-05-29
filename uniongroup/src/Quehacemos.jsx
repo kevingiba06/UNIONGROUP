@@ -17,8 +17,10 @@ import board from './assets/TIENDA_BOARD.jpg';
 import tndreebok from './assets/tienda_REEBOK.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import jlo_quehacemos from './assets/jlo_quehacemos.jpg';
 import { useEffect } from 'react';
+import logo_jlo from './assets/logo_jlo.svg';
+import foto_moises from './assets/FOTO_MOISES.jpg';
 
 function Quehacemos() {
   const currentYear = new Date().getFullYear();
@@ -39,6 +41,7 @@ function Quehacemos() {
         { img: dc, logo: logo_dc, link: "https://dcshoes.mx/?gad_source=1&gad_campaignid=22331569632&gbraid=0AAAAA-bjNF6NzEnFgTKqIJeARzGNRTn6f&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6g06kUQSM9D5Guf38bLgXQDNGg8C2K7vnVfRZiN_WcNajviRbQRs78aAgk4EALw_wcB" },
         { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" },
         { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" },
+        { img: jlo_quehacemos, logo: logo_jlo, link: "https://www.coppel.com/jennifer-lopez" },
       ]
     },
     {
@@ -56,7 +59,13 @@ function Quehacemos() {
     },
     {
       titulo: "Realciones \nEstratégicas",
-      imagenes: [],
+      imagenes: [
+        { img: rbk, logo: logo_rbk, link: "https://www.reebok.mx/" },
+        { img: foto_moises },
+        { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" },
+        { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" },
+        { img: jlo_quehacemos, logo: logo_jlo, link: "https://www.coppel.com/jennifer-lopez" },
+      ],
       descripcion: "Identificamos y gestionamos proveedores confiables globalmente."
     },
     {
@@ -66,7 +75,7 @@ function Quehacemos() {
         { img: board, logo: logo_board, link: "https://www.boardriders.eu" },
         { img: tndreebok, logo: logo_rbk, link: "https://www.reebok.mx/" },
       ],
-            style: {
+      style: {
         width: '100%',
         height: 'auto',
         objectFit: 'contain'
