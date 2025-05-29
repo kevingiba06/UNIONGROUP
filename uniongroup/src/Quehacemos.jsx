@@ -21,6 +21,9 @@ import jlo_quehacemos from './assets/jlo_quehacemos.jpg';
 import { useEffect } from 'react';
 import logo_jlo from './assets/logo_jlo.svg';
 import foto_moises from './assets/FOTO_MOISES.jpg';
+import ms from './assets/MOI Y SHAQ.jpg';
+import jj from './assets/JENIFER Y JOSE.jpg';
+import tlt from './assets/TODOSLOSTAWIL.jpg';
 
 function Quehacemos() {
   const currentYear = new Date().getFullYear();
@@ -58,13 +61,13 @@ function Quehacemos() {
       imagen: mapa_union
     },
     {
-      titulo: "Realciones \nEstratégicas",
+      titulo: "Relaciones \nEstratégicas",
+      disableLinks: true,
       imagenes: [
-        { img: rbk, logo: logo_rbk, link: "https://www.reebok.mx/" },
+        { img: tlt },
         { img: foto_moises },
-        { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" },
-        { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" },
-        { img: jlo_quehacemos, logo: logo_jlo, link: "https://www.coppel.com/jennifer-lopez" },
+        { img: ms },
+        { img: jj },
       ],
       descripcion: "Identificamos y gestionamos proveedores confiables globalmente."
     },
@@ -155,19 +158,42 @@ function Quehacemos() {
           {seleccion.imagenes ? (
             <div className="imagenes-seleccion" data-aos="fade-up">
               {seleccion.imagenes.map((item, i) => (
-                <div key={i} style={{ textAlign: 'center' }}>
-                  <a href={item.link} target='_blank' rel='noopener noreferrer'>
-                    <img
-                      src={item.img}
-                      alt={`${seleccion.titulo} ${i}`}
-                      className="imagen-seleccion" data-aos="fade-up"
-                    />
-                    <img
-                      src={item.logo}
-                      alt={`Logo ${i}`}
-                      style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
-                    />
-                  </a>
+                <div key={i} style={{ textAlign: 'center', width: '100%' }}>
+                  {seleccion.disableLinks ? (
+                    <>
+                      <img
+                        src={item.img}
+                        alt={`${seleccion.titulo} ${i}`}
+                        className="img-expand"
+                        data-aos="fade-up"
+                      />
+                      {item.logo && (
+                        <img
+                          src={item.logo}
+                          alt={`Logo ${i}`}
+                          className="img-expand"
+                          style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
+                        />
+                      )}
+                    </>
+                  ) : (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={item.img}
+                        alt={`${seleccion.titulo} ${i}`}
+                        className="img-expand"
+                        data-aos="fade-up"
+                      />
+                      {item.logo && (
+                        <img
+                          src={item.logo}
+                          alt={`Logo ${i}`}
+                          className="img-expand"
+                          style={{ height: '50px', marginTop: '10px', objectFit: 'contain' }}
+                        />
+                      )}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
@@ -175,7 +201,7 @@ function Quehacemos() {
             <img
               src={seleccion.imagen}
               alt={seleccion.titulo}
-              className="imagen-seleccion" data-aos="fade-up"
+              className="img-expand" data-aos="fade-up"
               style={seleccion.style}
             />
           ) : null}
