@@ -183,9 +183,10 @@ body {
   /* Centra horizontalmente */
   flex-wrap: wrap;
   /* Permite que se muevan a la siguiente línea si no caben */
-  gap: 80px;
+  gap: 120px;
   /* Espaciado entre botones */
   margin-top: 20px;
+  font: 1em sans-serif;;
 }
 
 .contenido-seleccionado {

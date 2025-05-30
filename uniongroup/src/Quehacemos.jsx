@@ -64,10 +64,10 @@ function Quehacemos() {
       titulo: "Relaciones \nEstratégicas",
       disableLinks: true,
       imagenes: [
-        { img: tlt },
-        { img: foto_moises },
-        { img: ms },
-        { img: jj },
+        { img: tlt, texto: "Lanzamiento Reebok" },
+        { img: foto_moises, texto: "Halston" },
+        { img: ms, texto: "Shaquille O´Neal" },
+        { img: jj, texto: "Jennifer Lopez" },
       ],
       descripcion: "Identificamos y gestionamos proveedores confiables globalmente."
     },
@@ -75,8 +75,12 @@ function Quehacemos() {
       titulo: "Retail",
       descripcion: "",
       imagenes: [
-        { img: board, logo: logo_board, link: "https://www.boardriders.eu" },
+        { img: board, logo: logo_board, link: "https://www.boardriders.eu", },
         { img: tndreebok, logo: logo_rbk, link: "https://www.reebok.mx/" },
+      ],
+      ubicaciones: [
+        { nombre: "Tienda Reebok CDMX", direccion: "https://goo.gl/maps/EXAMPLE1" },
+        { nombre: "Boardriders Cancún", direccion: "https://goo.gl/maps/EXAMPLE2" }
       ],
       style: {
         width: '100%',
@@ -167,6 +171,12 @@ function Quehacemos() {
                         className="img-expand"
                         data-aos="fade-up"
                       />
+                      {/*  TEXTO DEBAJO DE LA IMAGEN */}
+                      {item.texto && (
+                        <p style={{ marginTop: '10px', color: '#ffff', fontSize: '30px' }}>
+                          {item.texto}
+                        </p>
+                      )}
                       {item.logo && (
                         <img
                           src={item.logo}
@@ -196,6 +206,37 @@ function Quehacemos() {
                   )}
                 </div>
               ))}
+              {/* 🔽 AGREGADO: Ubicaciones debajo de las imágenes */}
+              {seleccion.ubicaciones && (
+                <div style={{
+                  marginTop: '40px', textAlign: 'center', display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  width: '100%',
+                }}>
+                  <h3 style={{ color: '#537e5f' }}>Ubicaciones de Tiendas</h3>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {seleccion.ubicaciones.map((ubicacion, idx) => (
+                      <li key={idx} style={{ margin: '10px 0' }}>
+                        <a
+                          href={ubicacion.direccion}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: '#fff',
+                            textDecoration: 'underline',
+                            fontSize: '18px',
+                            cursor: 'pointer',
+                            display: 'inline-block',
+                          }}
+                        >
+                          {ubicacion.nombre}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ) : seleccion.imagen ? (
             <img
