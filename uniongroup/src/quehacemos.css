@@ -118,7 +118,6 @@ body {
   width: auto;
   height: auto;
   object-fit: contain;
-  flex: 1 1 200px;
   /* 👈 Permite que se reduzca/adapte automáticamente */
   max-height: 300px;
   /* Ajusta a lo que necesites */
