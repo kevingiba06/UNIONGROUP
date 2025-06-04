@@ -5,123 +5,11 @@ import backIcon from './assets/icons8-atras-48.png';
 import logo_textos from 'uniongroup/src/logo_footer_2.svg';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import ttt from './assets/TAWIL-REEBOK.jpg';
-import fm from './assets/FOTO_MOISES_1.jpg';
-import mg from './assets/MOI_GUYLAROCHE.jpg';
+//import ttt from './assets/TAWIL-REEBOK.jpg';
+//import fm from './assets/FOTO-MOISES-1.jpg';
+//import mg from './assets/MOI_GUYLAROCHE.jpg';
 
-const timelineData = [
-  {
-    year: '1980',
-    image: ttt,
-    description: 'Moises Tawil inaugura Licencias Internacionales con el objetivo de sublicenciar marcas bajo un modelo de royalties.'
-  },
-  {
-    year: '1981',
-    image: fm,
-    description: 'Se formaliza un acuerdo con Halston y lo incorporamos a nuestro portafolio de Licencias Máster.'
-  },
-  {
-    year: '1989',
-    image: mg,
-    description: 'Se formaliza un acuerdo con Guy Laroche y lo incorporamos a nuestro portafolio de Licencias Máster..'
-  },
-  {
-    year: '1992',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Se formaliza un acuerdo con Ted Lapidus y lo incorporamos a nuestro portafolio de Licencias Máster.'
-  },
-  {
-    year: '1994',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '1999',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2003',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2004',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2005',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2008',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2009',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2010',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2012',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2013',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2015',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2017',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2018',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2019',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2021',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2022',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2023',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  },
-    {
-    year: '2024',
-    image: 'https://via.placeholder.com/300x200?text=2024',
-    description: 'Presente: innovación y tecnología.'
-  }
 
-];
 
 
 function Quienessomos() {
@@ -176,27 +64,14 @@ function Quienessomos() {
         </div>
       </div>
 
-      {/* Línea del tiempo */}
-      <div className="timeline-container" data-aos="flip-left">
-        <p className='timeline_title' data-aos="flip-left">Nuestro Camino Histórico</p>
-        <div className="timeline-left" data-aos="flip-left">
-          {timelineData.map((item, index) => (
-            <div
-              key={index}
-              className={`timeline-year ${index === selected ? 'active' : ''}` }
-              onClick={() => setSelected(index)}
-            >
-              {item.year}
-            </div>
-          ))}
-        </div>
-        <div className="timeline-right" data-aos="flip-left"> 
-          <img src={timelineData[selected].image} alt={timelineData[selected].year} />
-          <p>{timelineData[selected].description}</p>
-        </div>
+      <div className="timeline-container" data-aos="zoom-in-up" data-aos-duration="800">
+        <p>Nuestra Historia</p>
+        <iframe 
+        src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vREG8poNdxYS7fGjtkcoeAHbdRUvglQz5BvEPEZI0C9KdQ9w6-6aDF-znD4_2eTW2dhxQ_MFPBnlS-P&font=Default&lang=es&initial_zoom=2&width=100%25&height=650' width='100%' height='1000'
+        allowfullscreen 
+        frameborder='0'>
+        </iframe>
       </div>
-
-
       <div className='info-email-logo'>
         <div className='info'>
           <p>Alianzas globales, relaciones sólidas</p>
