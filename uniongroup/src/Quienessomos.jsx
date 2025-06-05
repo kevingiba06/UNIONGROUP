@@ -7,35 +7,60 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import ttt from './assets/TAWIL-REEBOK.jpg';
 import fm from './assets/FOTO-MOISES-1.jpg';
-//import mg from './assets/MOI_GUYLAROCHE.jpg';
+import novdos from './assets/9294031213.jpg';
+import mg from './assets/MOI_GUYLAROCHE.jpg';
+import fn from './assets/99.jpg';
+import doscu from './assets/04.jpg';
+//import dosci from './assets/';
+import dosoc from './assets/08.jpg';
+import dosnu from './assets/09.jpg';
+import dosdi from './assets/10.jpg';
+import dosqu from './assets/15.jpg';
+import doste from './assets/17.jpg';
+import dosho from './assets/18.png';
+import dosve from './assets/19.jpg';
+import dosvo from './assets/21.jpg';
+import dosvs from './assets/22.png';
+import dosvr from './assets/23.jpg';
+import dosvt from './assets/24.png';
 
 const timelineData = [
   { year: '1980', image: ttt, description: 'Moises Tawil inaugura Licencias Internacionales con el objetivo de sublicenciar marcas bajo un modelo de royalties.' },
   { year: '1981', image: fm, description: 'Expansión internacional.' },
-  { year: '1989', image: 'https://via.placeholder.com/300x200?text=2005', description: 'Nuevas alianzas estratégicas.' },
-  { year: '1992', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '1994', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '1999', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2003', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2004', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2005', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2008', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2009', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2010', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2012', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2013', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2015', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2017', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2018', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2019', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2021', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2022', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2023', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
-  { year: '2024', image: 'https://via.placeholder.com/300x200?text=2024', description: 'Presente: innovación y tecnología.' },
+  { year: '1989', image: mg, description: 'Nuevas alianzas estratégicas.' },
+  { year: '1992', image: novdos, description: 'Presente: innovación y tecnología.' },
+  { year: '1994', image: novdos, description: 'Presente: innovación y tecnología.' },
+  { year: '1999', image: fn, description: 'Presente: innovación y tecnología.' },
+  { year: '2003', image: novdos, description: 'Presente: innovación y tecnología.' },
+  { year: '2004', image: doscu, description: 'Presente: innovación y tecnología.' },
+  { year: '2005', image: '#', description: 'Presente: innovación y tecnología.' },
+  { year: '2008', image: dosoc, description: 'Presente: innovación y tecnología.' },
+  { year: '2009', image: dosnu, description: 'Presente: innovación y tecnología.' },
+  { year: '2010', image: dosdi, description: 'Presente: innovación y tecnología.' },
+  { year: '2012', image: novdos, description: 'Presente: innovación y tecnología.' },
+  { year: '2013', image: novdos, description: 'Presente: innovación y tecnología.' },
+  { year: '2015', image: dosqu, description: 'Presente: innovación y tecnología.' },
+  { year: '2017', image: doste, description: 'Presente: innovación y tecnología.' },
+  { year: '2018', image: dosho, description: 'Presente: innovación y tecnología.' },
+  { year: '2019', image: dosve, description: 'Presente: innovación y tecnología.' },
+  { year: '2021', image: dosvo, description: 'Presente: innovación y tecnología.' },
+  { year: '2022', image: dosvs, description: 'Presente: innovación y tecnología.' },
+  { year: '2023', image: dosvr, description: 'Presente: innovación y tecnología.' },
+  { year: '2024', image: dosvt, description: 'Presente: innovación y tecnología.' },
+]
+
+const secData = [
+  {title: 'Perseverancia', description: '#'},
+  {title: 'Humanismo', description: '*'},
+  {title: 'Pasión', description: '/'},
+  {title: 'Integridad', description: '1'},
+  {title: 'Lealtad', description: '2'},
 ]
 
 function Quienessomos() {
-  const [selected, setSelected] = useState(0);
+  const [selectedTimeline, setSelectedTimeline] = useState(0);
+  const [selectedValue, setSelectedValue] = useState(0);
+
   const currentYear = new Date().getFullYear();
   useEffect((useEffect) => {
     AOS.init({
@@ -92,21 +117,41 @@ function Quienessomos() {
         </div>
       </div>
 
+      <div className='title'>Nuestro Camino<br/>Histórico</div>
       <div className="timeline-container" data-aos="flip-left">
         <div className="timeline-left" data-aos="flip-left">
           <div className='up' data-aos="flip-left">
             {timelineData.map((item, index) => (
-              <div key={index} className={`timeline-year ${index === selected ? 'active' : ''}`} onClick={() => setSelected(index)}>
+              <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)}>
                 {item.year}
               </div>
             ))}
           </div>
           <div className='down'>
-            <p>{timelineData[selected].description}</p>
+            <div className='text cif'>
+              <div className='title'>
+                {timelineData[selectedTimeline].year}
+              </div>
+            </div>
+            <p>{timelineData[selectedTimeline].description}</p>
           </div>
         </div>
         <div className="timeline-right" data-aos="flip-left">
-          <img src={timelineData[selected].image} alt={timelineData[selected].year} />
+          <img src={timelineData[selectedTimeline].image} alt={timelineData[selectedTimeline].year} />
+        </div>
+      </div>
+
+      <div className='title2'>Nuestros Valores</div>
+      <div className='sec-container'>
+        <div className='sec-left'>
+          {secData.map((item, index) => (
+            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)}>
+              {item.title}
+            </div>
+          ))}
+        </div>
+        <div className='sec-right'>
+          <p>{secData[selectedValue].description}</p>
         </div>
       </div>
 
