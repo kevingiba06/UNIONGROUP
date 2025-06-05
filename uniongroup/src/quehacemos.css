@@ -72,13 +72,11 @@ body {
 }
 
 .center2 {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  font-weight: bolder;
   white-space: pre-line;
+  margin-top: 0.0001%;
 }
 
 .center3 {
@@ -132,14 +130,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.subtitle {
-  display: flex;
-  font-size: 450%;
-  color: #fff;
-  margin: 2%;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .info {
   display: flex;
   font-size: 180%;
@@ -184,8 +174,8 @@ body {
   /* Permite que se muevan a la siguiente línea si no caben */
   gap: 120px;
   /* Espaciado entre botones */
-  margin-top: 20px;
   font: 1em sans-serif;;
+  margin: 0%;
 }
 
 .contenido-seleccionado {
