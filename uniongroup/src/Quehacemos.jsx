@@ -124,7 +124,7 @@ function Quehacemos() {
         </div>
       </div>
 
-      <div className='center2' data-aos="fade-up">
+      <div className='center2' data-aos="fade-up" style={{height:'600px'}}>
         <div className='subtitle' data-aos="fade-up">
           <div className="selector-container" data-aos="fade-up">
             {opciones.map((item, index) => (
