@@ -265,12 +265,11 @@
 }
 
 .sec-right {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  font-size: 3.5vw;
-  font-family: 'Open Sans';
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   align-items: center;
   justify-content: center;
+  margin-left: 26%;
 }

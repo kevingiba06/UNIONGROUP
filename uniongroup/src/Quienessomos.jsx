@@ -151,12 +151,12 @@ function Quienessomos() {
           ))}
         </div>
         <div className='sec-right'>
-          {secData[selectedValue].description.split('\n').map((line, idx) => (
+          <p>{secData[selectedValue].description.split('\n').map((line, idx) => (
             <span key={idx}>
               {line}
               <br />
             </span>
-          ))}
+          ))}</p>
         </div>
       </div>
 
