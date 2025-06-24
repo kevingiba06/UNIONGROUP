@@ -11,7 +11,7 @@ import novdos from './assets/9294031213.jpg';
 import mg from './assets/MOI_GUYLAROCHE.jpg';
 import fn from './assets/99.jpg';
 import doscu from './assets/04.jpg';
-//import dosci from './assets/';
+import dosci from './assets/2005.jpg';
 import dosoc from './assets/08.jpg';
 import dosnu from './assets/09.jpg';
 import dosdi from './assets/10.jpg';
@@ -26,35 +26,35 @@ import dosvt from './assets/24.png';
 
 const timelineData = [
   { year: '1980', image: ttt, description: 'Moises Tawil inaugura Licencias Internacionales con el objetivo de sublicenciar marcas bajo un modelo de royalties.' },
-  { year: '1981', image: fm, description: 'Expansión internacional.' },
-  { year: '1989', image: mg, description: 'Nuevas alianzas estratégicas.' },
-  { year: '1992', image: novdos, description: 'Presente: innovación y tecnología.' },
-  { year: '1994', image: novdos, description: 'Presente: innovación y tecnología.' },
-  { year: '1999', image: fn, description: 'Presente: innovación y tecnología.' },
-  { year: '2003', image: novdos, description: 'Presente: innovación y tecnología.' },
-  { year: '2004', image: doscu, description: 'Presente: innovación y tecnología.' },
-  { year: '2005', image: '#', description: 'Presente: innovación y tecnología.' },
-  { year: '2008', image: dosoc, description: 'Presente: innovación y tecnología.' },
-  { year: '2009', image: dosnu, description: 'Presente: innovación y tecnología.' },
-  { year: '2010', image: dosdi, description: 'Presente: innovación y tecnología.' },
-  { year: '2012', image: novdos, description: 'Presente: innovación y tecnología.' },
-  { year: '2013', image: novdos, description: 'Presente: innovación y tecnología.' },
-  { year: '2015', image: dosqu, description: 'Presente: innovación y tecnología.' },
-  { year: '2017', image: doste, description: 'Presente: innovación y tecnología.' },
-  { year: '2018', image: dosho, description: 'Presente: innovación y tecnología.' },
-  { year: '2019', image: dosve, description: 'Presente: innovación y tecnología.' },
-  { year: '2021', image: dosvo, description: 'Presente: innovación y tecnología.' },
-  { year: '2022', image: dosvs, description: 'Presente: innovación y tecnología.' },
-  { year: '2023', image: dosvr, description: 'Presente: innovación y tecnología.' },
-  { year: '2024', image: dosvt, description: 'Presente: innovación y tecnología.' },
+  { year: '1981', image: fm, description: 'Se formaliza un acuerdo con Halston y lo incorporamos a nuestro portafolio de Licencias Máster.' },
+  { year: '1989', image: mg, description: 'Se formaliza un acuerdo con Guy Laroche y lo incorporamos a nuestro portafolio de Licencias Máster.' },
+  { year: '1992', image: novdos, description: 'Se formaliza un acuerdo con Ted Lapidus y lo incorporamos a nuestro portafolio de Licencias Máster.' },
+  { year: '1994', image: novdos, description: 'Se formaliza un acuerdo con Pierre Balmain y lo incorporamos a nuestro portafolio de Licencias Máster.' },
+  { year: '1999', image: fn, description: 'Se adquiere una participación del 50% en distribución y sublicencia de FUBU' },
+  { year: '2003', image: novdos, description: 'Se formaliza un acuerdo con Torino Lamborghini y lo incorporamos a nuestro portafolio de Licencias Máster.' },
+  { year: '2004', image: doscu, description: 'Integración de York Team Polo Club con Full Brand Management.' },
+  { year: '2005', image: dosci, description: 'Con la incorporación de José Tawil, primer miembro de la segunda generación, la empresa inicia la comercialización directa de productos, comenzando con la categoría de calcetería, bajo las marcas POLO, FUBU y LOTTO.' },
+  { year: '2008', image: dosoc, description: 'Se incorpora Alan Tawil, segunda generación, con Quiznos y Gloria Jeans con Licencia Máster exclusiva para México.' },
+  { year: '2009', image: dosnu, description: 'Se realiza el lanzamiento de Baby Phat en Liverpool.' },
+  { year: '2010', image: dosdi, description: 'Se incorpora como master license y distribución Members Only.' },
+  { year: '2012', image: novdos, description: 'Se abre la categoría de outerwear, junto el área de desarrollo y sourcing en China.' },
+  { year: '2013', image: novdos, description: 'Eduardo Tawil se incorpora a la empresa, asumiendo la responsabilidad del área de underwear.' },
+  { year: '2015', image: dosqu, description: 'La empresa adquiere la exclusividad de la marca Jennifer Lopez - JLO, implementando una estrategia de Full Brand Management.' },
+  { year: '2017', image: doste, description: 'Se firma un acuerdo con la marca CAT para el desarrollo y la comercialización directa de sus productos.' },
+  { year: '2018', image: dosho, description: 'Se firma YorkTeam Polo Club y Náutica para desarrollar y comercializar la categoría de calzado y accesorios.' },
+  { year: '2019', image: dosve, description: 'Se firmó la licencia para las categorías de calzado y calcetería para Disney y Marvel.' },
+  { year: '2021', image: dosvo, description: 'La marca Jeep se incorpora a Union Group en las categorías de apparel y accesorios.' },
+  { year: '2022', image: dosvs, description: 'Hemos sido seleccionados para adquirir la marca Reebok y operar en los canales Wholesale y DTC, abarcando todas sus categorías.' },
+  { year: '2023', image: dosvr, description: 'Hemos sido seleccionados como operadores de la marca Boardriders conformada por Roxy, Quiksilver, Billabong y DC shoes, en los tres canales de distribución, y se han firmado las licencias de Shaq y Aeropostale para la categoría de calzado.' },
+  { year: '2024', image: dosvt, description: 'Hoy hemos inaugurado más de 20 tiendas, abarcando las marcas Reebok y Boardriders.' },
 ]
 
 const secData = [
-  {title: 'Perseverancia', description: '#'},
-  {title: 'Humanismo', description: '*'},
-  {title: 'Pasión', description: '/'},
-  {title: 'Integridad', description: '1'},
-  {title: 'Lealtad', description: '2'},
+  { title: 'Perseverancia', description: 'Se firme y constante en todo lo que te propones, no te rindas ante las dificultades y lo alcanzarás.' },
+  { title: 'Humanismo', description: 'Somos empáticos, transparentes y respetamos a cada persona que nos rodea.' },
+  { title: 'Pasión', description: 'La honestidad, respeto por los demás, responsabilidad y cumplimiento.' },
+  { title: 'Integridad', description: 'Vive con emoción e intensidad, disfruta y ama lo que haces lleno de satisfacción.' },
+  { title: 'Lealtad', description: 'Demuestra tu entrega incondicional, fidelidad a tus principios y honestidad en todo el entorno.' },
 ]
 
 function Quienessomos() {
@@ -63,7 +63,7 @@ function Quienessomos() {
 
   const currentYear = new Date().getFullYear();
   useEffect((useEffect) => {
-    AOS.init({
+    AOS.refresh({
       duration: 500,
       once: false,
     });
@@ -84,8 +84,8 @@ function Quienessomos() {
       </div>
 
       <div className='center1' style={{ backgroundColor: 'black' }}>
-        <div className='title'>Quienes Somos</div>
-        <div className='texto' data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
+        <div className='title' data-aos="fade-up">Quienes Somos</div>
+        <div className='texto' data-aos="fade-left">
           <p>Somos una compañía de clase mundial, enfocada en el manejo de marcas, Desarrollo, Sourcing y Diseño de Producto, que cuenta con Relaciones Comerciales sólidas.<br /><br />
             Somos la empresa que gestiona y maneja grandes marcas con los mejores productos para Mexico, como la tuya.<br /><br />
             Somos las manos creativas que diseñan, pero también las manos expertas que hacen que tus productos cobren vida, siempre poniendo el ojo en cada detalle para mantener la más alta calidad, tal y como a ti te gusta.<br /><br />
@@ -103,31 +103,31 @@ function Quienessomos() {
         </div>
       </div>
 
-      <div className='titlee' data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
+      <div className='titlee' data-aos="zoom-in">
         <p>Somos una compañía con:</p>
       </div>
       <div className='center_2' style={{ backgroundColor: 'black' }}>
-        <div className='text cif'>
+        <div className='text cif' data-aos="fade-right">
           <p>Colaboradores</p>
           <p>Unidades vendidas al por menor</p>
         </div>
-        <div className='texto' data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
+        <div className='texto' data-aos="fade-left">
           <p>+400</p>
           <p>+30M</p>
         </div>
       </div>
 
-      <div className='title'>Nuestro Camino<br/>Histórico</div>
-      <div className="timeline-container" data-aos="flip-left">
-        <div className="timeline-left" data-aos="flip-left">
-          <div className='up' data-aos="flip-left">
+      <div className='title' data-aos="fade-up">Nuestro Camino<br />Histórico</div>
+      <div className="timeline-container" data-aos="zoom-in-up">
+        <div className="timeline-left">
+          <div className='up'>
             {timelineData.map((item, index) => (
-              <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)}>
+              <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)} data-aos="fade-right">
                 {item.year}
               </div>
             ))}
           </div>
-          <div className='down'>
+          <div className='down' data-aos="fade-up">
             <div className='text cif'>
               <div className='title'>
                 {timelineData[selectedTimeline].year}
@@ -136,21 +136,21 @@ function Quienessomos() {
             <p>{timelineData[selectedTimeline].description}</p>
           </div>
         </div>
-        <div className="timeline-right" data-aos="flip-left">
+        <div className="timeline-right" data-aos="zoom-in">
           <img src={timelineData[selectedTimeline].image} alt={timelineData[selectedTimeline].year} />
         </div>
       </div>
 
-      <div className='title2'>Nuestros Valores</div>
+      <div className='title2' data-aos="fade-up">Nuestros Valores</div>
       <div className='sec-container'>
         <div className='sec-left'>
           {secData.map((item, index) => (
-            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)}>
+            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)} data-aos="fade-right">
               {item.title}
             </div>
           ))}
         </div>
-        <div className='sec-right'>
+        <div className='sec-right' data-aos="fade-left">
           <p>{secData[selectedValue].description}</p>
         </div>
       </div>

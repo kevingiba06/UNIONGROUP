@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'NTNeussRegular';
+  src: url('./fonts/NTNeuss-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .home-container {
   color: #fff;
   width: auto;
@@ -63,7 +70,7 @@
 
 .title2 {
   display: flex;
-  font-size: 30px;
+  font-size: 90px;
   color: #fff;
   background-color: #808080;
   margin-top: -1.7%;
@@ -78,6 +85,7 @@
 .texto {
   font-size: 40px;
   margin-left: 3%;
+  font-family: 'NT Nexus';
 }
 
 .center1 {
@@ -193,7 +201,9 @@
   font-size: 2rem;
   color: #fff;
   margin-bottom: 10px;
+  font-family: 'NTNeussRegular';
 }
+
 .up {
   height: 100%;
   align-items: center;
@@ -235,8 +245,28 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Estilo por defecto para los valores */
+.sec-container .select {
+  color: rgb(102, 96, 96);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Estilo al pasar el cursor */
+.sec-container .select:hover {
+  color: white;
+}
+
+/* Estilo cuando está seleccionado */
+.sec-container .select.active {
+  color: white;
+  font-weight: lighter
+}
+
 .sec-right {
   width: 50%;
+  font-size: 40px;
+  align-items: center;
 }
 
 .sec-left {
@@ -244,4 +274,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 40px;
+  cursor: pointer;
+  transition: width 0.3s ease, left 0.3s ease;
+  color: #666;
+  position: relative;
 }
