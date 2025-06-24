@@ -268,13 +268,14 @@
   width: 100%;
   text-align: center;
   font-size: 25px;
-  font-family: 'Open Sans';
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   align-items: center;
   justify-content: center;
   margin-left: 26%;
   display: flex;
   flex-direction: column;
 }
+ 
 
 .sec-left {
   width: 50%;
