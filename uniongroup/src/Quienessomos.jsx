@@ -108,12 +108,10 @@ function Quienessomos() {
       </div>
       <div className='center_2' style={{ backgroundColor: 'black' }}>
         <div className='text cif' data-aos="fade-right">
-          <p>Colaboradores</p>
-          <p>Unidades vendidas al por menor</p>
+          <p>Colaboradores<br/><br/><br/>Unidades vendidas al por menor</p>
         </div>
         <div className='texto' data-aos="fade-left">
-          <p>+400</p>
-          <p>+30M</p>
+          <p>+400<br/><br/>+30M</p>
         </div>
       </div>
 
