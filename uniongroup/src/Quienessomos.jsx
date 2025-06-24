@@ -50,11 +50,11 @@ const timelineData = [
 ]
 
 const secData = [
-  {title: 'Perseverancia', description: '#'},
-  {title: 'Humanismo', description: '*'},
-  {title: 'Pasión', description: '/'},
-  {title: 'Integridad', description: '1'},
-  {title: 'Lealtad', description: '2'},
+  {title: 'Perseverancia', description: 'Se firme y constante en todo\n lo que te propones, no te\n rindas ante las dificultades y\n lo alcanzarás.'},
+  {title: 'Humanismo', description: 'Somos empáticos,\n transparentes y respetamos a\n cada persona que nos rodea.'},
+  {title: 'Pasión', description: 'La honestidad, respeto por los\n demás, responsabilidad y\n cumplimiento.'},
+  {title: 'Integridad', description: 'Vive con emoción e\n intensidad, disfruta y ama lo\n que haces lleno de\n satisfacción.'},
+  {title: 'Lealtad', description: 'Demuestra tu entrega\n incondicional, fidelidad a tus\n principios y honestidad en\n todo el entorno.'},
 ]
 
 function Quienessomos() {
@@ -62,8 +62,8 @@ function Quienessomos() {
   const [selectedValue, setSelectedValue] = useState(0);
 
   const currentYear = new Date().getFullYear();
-  useEffect((useEffect) => {
-    AOS.refresh({
+  useEffect(() => {
+    AOS.init({
       duration: 500,
       once: false,
     });
@@ -117,12 +117,14 @@ function Quienessomos() {
         </div>
       </div>
 
-      <div className='title'>Nuestro Camino<br/>Histórico</div>
+      <div className='title' data-aos="fade-up">
+        Nuestro Camino<br/>Histórico
+      </div>
       <div className="timeline-container" data-aos="flip-left">
         <div className="timeline-left" data-aos="flip-left">
           <div className='up' data-aos="flip-left">
             {timelineData.map((item, index) => (
-              <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)} data-aos="fade-right">
+              <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)}>
                 {item.year}
               </div>
             ))}
@@ -141,17 +143,29 @@ function Quienessomos() {
         </div>
       </div>
 
-      <div className='title2' data-aos="fade-up">Nuestros Valores</div>
+      <div className='title2' data-aos="fade-up">
+        Nuestros Valores
+      </div>
       <div className='sec-container'>
         <div className='sec-left'>
           {secData.map((item, index) => (
-            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)}>
+            <div
+              key={index}
+              className={`select-title ${index === selectedValue ? 'active' : ''}`}
+              onClick={() => setSelectedValue(index)}
+              data-aos={index === selectedValue ? 'fade-right' : undefined}
+            >
               {item.title}
             </div>
           ))}
         </div>
         <div className='sec-right'>
-          <p>{secData[selectedValue].description}</p>
+          {secData[selectedValue].description.split('\n').map((line, idx) => (
+            <span key={idx}>
+              {line}
+              <br />
+            </span>
+          ))}
         </div>
       </div>
 
