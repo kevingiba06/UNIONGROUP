@@ -237,7 +237,15 @@
 }
 
 .sec-right {
-  width: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Open Sans';
+  align-items: center;
+  justify-content: center;
+  margin-left: 26%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sec-left {
@@ -259,17 +267,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  color: #fff;
   font-size: 5vw;
   font-family: 'Open Sans';
   cursor: pointer;
-}
-
-.sec-right {
-  width: 100%;
-  text-align: center;
-  font-size: 25px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  align-items: center;
-  justify-content: center;
-  margin-left: 26%;
 }
