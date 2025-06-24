@@ -50,11 +50,11 @@ const timelineData = [
 ]
 
 const secData = [
-  { title: 'Perseverancia', description: 'Se firme y constante en todo lo que te propones, no te rindas ante las dificultades y lo alcanzarás.' },
-  { title: 'Humanismo', description: 'Somos empáticos, transparentes y respetamos a cada persona que nos rodea.' },
-  { title: 'Pasión', description: 'La honestidad, respeto por los demás, responsabilidad y cumplimiento.' },
-  { title: 'Integridad', description: 'Vive con emoción e intensidad, disfruta y ama lo que haces lleno de satisfacción.' },
-  { title: 'Lealtad', description: 'Demuestra tu entrega incondicional, fidelidad a tus principios y honestidad en todo el entorno.' },
+  {title: 'Perseverancia', description: '#'},
+  {title: 'Humanismo', description: '*'},
+  {title: 'Pasión', description: '/'},
+  {title: 'Integridad', description: '1'},
+  {title: 'Lealtad', description: '2'},
 ]
 
 function Quienessomos() {
@@ -117,10 +117,10 @@ function Quienessomos() {
         </div>
       </div>
 
-      <div className='title' data-aos="fade-up">Nuestro Camino<br />Histórico</div>
-      <div className="timeline-container" data-aos="zoom-in-up">
-        <div className="timeline-left">
-          <div className='up'>
+      <div className='title'>Nuestro Camino<br/>Histórico</div>
+      <div className="timeline-container" data-aos="flip-left">
+        <div className="timeline-left" data-aos="flip-left">
+          <div className='up' data-aos="flip-left">
             {timelineData.map((item, index) => (
               <div key={index} className={`timeline-year ${index === selectedTimeline ? 'active' : ''}`} onClick={() => setSelectedTimeline(index)} data-aos="fade-right">
                 {item.year}
@@ -145,12 +145,12 @@ function Quienessomos() {
       <div className='sec-container'>
         <div className='sec-left'>
           {secData.map((item, index) => (
-            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)} data-aos="fade-right">
+            <div key={index} className={`select ${index === selectedValue ? 'active' : ''}`} onClick={() => setSelectedValue(index)}>
               {item.title}
             </div>
           ))}
         </div>
-        <div className='sec-right' data-aos="fade-left">
+        <div className='sec-right'>
           <p>{secData[selectedValue].description}</p>
         </div>
       </div>
