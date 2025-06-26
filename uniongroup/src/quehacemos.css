@@ -78,6 +78,7 @@ body {
   justify-content: center;
   background-color: #fff;
   white-space: pre-line;
+  height: auto;
 }
 
 .center3 {
@@ -169,6 +170,7 @@ body {
   display: flex;
   flex-direction: row;
   /* Alinea horizontalmente */
+  align-items: center;
   justify-content: center;
   /* Centra horizontalmente */
   flex-wrap: wrap;

@@ -37,38 +37,16 @@ function Quehacemos() {
   const [seleccion, setSeleccion] = useState(null);
   const opciones = [
     {
-      titulo: "Marcas \nGlobales",
-      descripcion: "Management y Gestión de Marcas Internacionales distribuyendo y desarrollando productos de alta calidad.",
-      imagenes: [
-        { img: rbk, logo: logo_rbk, link: "https://www.reebok.mx/" },
-        { img: dc, logo: logo_dc, link: "https://dcshoes.mx/?gad_source=1&gad_campaignid=22331569632&gbraid=0AAAAA-bjNF6NzEnFgTKqIJeARzGNRTn6f&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6g06kUQSM9D5Guf38bLgXQDNGg8C2K7vnVfRZiN_WcNajviRbQRs78aAgk4EALw_wcB" },
-        { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" },
-        { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" },
-        { img: jlo_quehacemos, logo: logo_jlo, link: "https://www.coppel.com/jennifer-lopez" },
-      ]
+      titulo: "Marcas \nGlobales", descripcion: "Management y Gestión de Marcas Internacionales distribuyendo y desarrollando productos de alta calidad.", imagenes: [ { img: rbk, logo: logo_rbk, link: "https://www.reebok.mx/" }, { img: dc, logo: logo_dc, link: "https://dcshoes.mx/?gad_source=1&gad_campaignid=22331569632&gbraid=0AAAAA-bjNF6NzEnFgTKqIJeARzGNRTn6f&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6g06kUQSM9D5Guf38bLgXQDNGg8C2K7vnVfRZiN_WcNajviRbQRs78aAgk4EALw_wcB" }, { img: rxy, logo: logo_rxy, link: "https://www.roxy.com" }, { img: bbong, logo: logo_bbong, link: "https://www.billabong.com/" }, { img: jlo_quehacemos, logo: logo_jlo, link: "https://www.coppel.com/jennifer-lopez" }, ]
     },
     {
-      titulo: "Desarrollo \ny Diseño",
-      imagen: des_y_dis,
-      style: {
-        width: '100%',
-        height: 'auto',
-        objectFit: 'contain'
-      }
+      titulo: "Desarrollo \ny Diseño", imagen: des_y_dis, style: { width: '100%', height: 'auto', objectFit: 'contain' }
     },
     {
-      titulo: "Sourcing",
-      imagen: mapa_union
+      titulo: "Sourcing", imagen: mapa_union
     },
     {
-      titulo: "Relaciones \nEstratégicas",
-      disableLinks: true,
-      imagenes: [
-        { img: tlt, texto: "Lanzamiento Reebok" },
-        { img: foto_moises, texto: "Halston" },
-        { img: ms, texto: "Shaquille O´Neal" },
-        { img: jj, texto: "Jennifer Lopez" },
-      ],
+      titulo: "Relaciones \nEstratégicas", disableLinks: true, imagenes: [ { img: tlt, texto: "Lanzamiento Reebok" }, { img: foto_moises, texto: "Halston" }, { img: ms, texto: "Shaquille O´Neal" }, { img: jj, texto: "Jennifer Lopez" },],
       descripcion: "Identificamos y gestionamos proveedores confiables globalmente."
     },
     {
@@ -124,7 +102,7 @@ function Quehacemos() {
         </div>
       </div>
 
-      <div className='center2' data-aos="fade-up" style={{height:'600px'}}>
+      <div className='center2' data-aos="fade-up">
         <div className='subtitle' data-aos="fade-up">
           <div className="selector-container" data-aos="fade-up">
             {opciones.map((item, index) => (
@@ -206,37 +184,6 @@ function Quehacemos() {
                   )}
                 </div>
               ))}
-              {/* 🔽 AGREGADO: Ubicaciones debajo de las imágenes */}
-              {seleccion.ubicaciones && (
-                <div style={{
-                  marginTop: '40px', textAlign: 'center', display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  width: '100%',
-                }}>
-                  <h3 style={{ color: '#537e5f' }}>Ubicaciones de Tiendas</h3>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    {seleccion.ubicaciones.map((ubicacion, idx) => (
-                      <li key={idx} style={{ margin: '10px 0' }}>
-                        <a
-                          href={ubicacion.direccion}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            color: '#fff',
-                            textDecoration: 'underline',
-                            fontSize: '18px',
-                            cursor: 'pointer',
-                            display: 'inline-block',
-                          }}
-                        >
-                          {ubicacion.nombre}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
           ) : seleccion.imagen ? (
             <img
