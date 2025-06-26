@@ -1,26 +1,27 @@
 .home-container {
-    color: #fff;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Open Sans';
+  color: #fff;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Open Sans';
 }
 
 .logo {
-    display: flex;
-    width: 120px;
-    height: 50px;
-    background-image: url(assets/logo_2.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  display: flex;
+  width: 120px;
+  height: 50px;
+  background-image: url(assets/logo_2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .text {
   display: flex;
-  gap: 60px; /* ← espacio entre los <a> */
+  gap: 60px;
+  /* ← espacio entre los <a> */
   color: #fff;
   font-size: 1.5rem;
 }
@@ -36,8 +37,43 @@
 }
 
 .logo-text {
-    display: flex;
-    align-items: center;
-    gap: 150px;
-    /* Espacio entre logo y texto */
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  /* Espacio entre logo y texto */
+}
+
+.center-left-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3%;
+  background-color: #000;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; /* Se ajusta automáticamente al alto de la pantalla */
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.marcas {
+  display: flex;
+  font-size: 60px;
+  color: #fff;
+  margin: 2%;
+  background-color: #000;
+}
+
+.info {
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  text-align: left;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  margin-top: 2%;
 }
