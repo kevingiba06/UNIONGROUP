@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link
 import './quienessomos.css';
 import backIcon from './assets/icons8-atras-48.png';
-import logo_textos from 'uniongroup/src/logo_footer_2.svg';
+import logo_textos from './logo_footer_2.svg';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import ttt from './assets/TAWIL-REEBOK.jpg';
