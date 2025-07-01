@@ -57,14 +57,14 @@
 
 .marcas {
   display: flex;
-  font-size: 60px;
+  font-size: 1000%;
   color: #fff;
   margin: 2%;
 }
 
 .info {
   display: flex;
-  font-size: 20px;
+  font-size: 145%;
   color: #fff;
   text-align: left;
 }
