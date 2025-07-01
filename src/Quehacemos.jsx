@@ -98,7 +98,7 @@ function Quehacemos() {
         <h2 className='title' data-aos="fade-up">Visión</h2>
         <div className='info' data-aos="fade-up">
           Asegurar resultados que cumplan con las necesidades<br />
-          del mercado y la promesa de cada marca.
+          del mercado y la promesa de cada marca.<br /><br />
         </div>
       </div>
 
@@ -196,12 +196,12 @@ function Quehacemos() {
         </>
       )}
 
-      <div className='info-email-logo' data-aos="fade-up">
+      <div className='info-email-logo'>
         <div className='info'>
           <p>Alianzas globales, relaciones sólidas</p>
         </div>
         <div className='email'>
-          recursoshumanos@uniongroup.mx
+          pr@uniongroup.mx
         </div>
         <div className='years-logo-container'>
           <span className='year'>1980</span>
