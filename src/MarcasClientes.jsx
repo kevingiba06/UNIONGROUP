@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -26,6 +26,10 @@ import logo_shaq from './assets/logo_shaq.svg';
 import logo_cat from './assets/logo_cat.svg';
 import logo_board from './assets/LOGO_BOARD.svg';
 import logo_aero from './assets/AEROPOSTALE.svg';
+import mycaltec from './assets/MYCALTEC.jpg';
+import mycquik from './assets/MYCQUIK.png';
+import mycpolo from './assets/MYCPOLO.png';
+import mycaero from './assets/MYCAERO.jpg';
 
 
 const logos = [
@@ -74,16 +78,27 @@ const logos = [
 ];
 
 const marcaslist = [
-    { titulo: "VER TODAS", image: collage, logos: logos },
-    { titulo: "FULL BRAND MANAGEMENT", image: collage, logos: [logos[3], logos[11], logos[6], logos[2], logos[1], logos[9], logos[10], logos[0]] },
-    { titulo: "LICENCIAS", image: collage, logos: [logos[20], logos[4], logos[15], logos[13], logos[18], logos[8], logos[5], logos[7], logos[12], logos[17]] },
-    { titulo: "DISTRIBUCIÓN", image: collage, logos: [logos[16], logos[14]] },
+    { titulo: "VER TODAS", images: [mycaltec, mycquik, mycpolo, mycaero], logos: logos },
+    { titulo: "FULL BRAND MANAGEMENT",  images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[3], logos[11], logos[6], logos[2], logos[1], logos[9], logos[10], logos[0]] },
+    { titulo: "LICENCIAS", images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[20], logos[4], logos[15], logos[13], logos[18], logos[8], logos[5], logos[7], logos[12], logos[17]] },
+    { titulo: "DISTRIBUCIÓN",images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[16], logos[14]] },
 ];
 
 
 
 function MarcasyClientes() {
     const [selectedmarca, setSelectedmarca] = useState(0);
+    // Slideshow state for collage images
+    const collageImages = [collage];
+    const [collageIndex, setCollageIndex] = useState(0);
+    // Slideshow state for marcas-left
+    const [marcaImgIndex, setMarcaImgIndex] = useState(0);
+
+    // Memoize imagesArr for slideshow (prefer images, fallback to logos)
+    const imagesArr = useMemo(() => {
+        const arr = marcaslist[selectedmarca].images || marcaslist[selectedmarca].logos || [];
+        return arr;
+    }, [selectedmarca]);
 
     const currentYear = new Date().getFullYear();
     useEffect(() => {
@@ -92,6 +107,27 @@ function MarcasyClientes() {
             once: false,
         });
     }, []);
+
+    // Slideshow effect for collage
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCollageIndex((prev) => (prev + 1) % collageImages.length);
+        }, 2500);
+        return () => clearInterval(interval);
+    }, [collageImages.length]);
+
+    // Slideshow effect for marcas-left
+    useEffect(() => {
+        setMarcaImgIndex(0); // Reset when marca changes
+    }, [selectedmarca]);
+
+    useEffect(() => {
+        if (imagesArr.length <= 1) return;
+        const interval = setInterval(() => {
+            setMarcaImgIndex((prev) => (prev + 1) % imagesArr.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, [selectedmarca, imagesArr]);
 
     return (
         <div className="home-container">
@@ -113,12 +149,17 @@ function MarcasyClientes() {
                     A lo largo de los años, Union Group ha forjado sólidas alianzas con marcas y clientes de renombre a nivel global. Estas<br /> colaboraciones han permitido a la compañía expandir su alcance y fortalecer su reputación en diversos mercados. Union<br /> Group se enorgullece de trabajar con marcas líderes, creando sinergias que impulsan el crecimiento y la innovación continua.<br /><br />
                     Union Group se enorgullece de trabajar con marcas líderes, creando sinergias que impulsan el crecimiento y la innovación continua.
                 </div>
-                <img className="img" src={collage} alt="Collage" />
+                <img className="img" src={collageImages[collageIndex]} alt="Collage" />
             </div>
 
             <div className='marcas-container'>
                 <div className='marcas-left' data-aos="fade-up">
-                    <img src={marcaslist[selectedmarca].image} alt={marcaslist[selectedmarca].titulo} />
+                    {imagesArr.length > 0 && imagesArr[marcaImgIndex] && (
+                        <img
+                            src={typeof imagesArr[marcaImgIndex] === 'string' ? imagesArr[marcaImgIndex] : (imagesArr[marcaImgIndex].logo || imagesArr[marcaImgIndex].image)}
+                            alt={marcaslist[selectedmarca].titulo}
+                        />
+                    )}
                 </div>
                 <div className='marcas-right' data-aos="fade-up">
                     <div className='marcas-up'>
