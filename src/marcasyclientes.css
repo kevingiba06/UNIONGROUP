@@ -59,7 +59,8 @@
   display: flex;
   font-size: 1000%;
   color: #fff;
-  margin: 2%;
+  margin: 20px;
+  font-weight: lighter;
 }
 
 .info {
@@ -67,6 +68,8 @@
   font-size: 145%;
   color: #fff;
   text-align: left;
+  margin: 20px;
+  text-align: justify;
 }
 
 .img{
