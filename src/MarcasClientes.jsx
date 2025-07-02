@@ -27,8 +27,8 @@ import logo_cat from './assets/logo_cat.svg';
 import logo_board from './assets/LOGO_BOARD.svg';
 import logo_aero from './assets/AEROPOSTALE.svg';
 import mycaltec from './assets/MYCALTEC.jpg';
-import mycquik from './assets/MYCQUIK.png';
-import mycpolo from './assets/MYCPOLO.png';
+import mycquik from './assets/MYCQUIK.jpg';
+import mycpolo from './assets/MYCPOLO.jpg';
 import mycaero from './assets/MYCAERO.jpg';
 
 
