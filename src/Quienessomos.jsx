@@ -129,7 +129,7 @@ function Quienessomos() {
           </div>
           <div className='down' data-aos="fade-up">
             <div className='text cif'>
-              <div className='title'>
+              <div className='year title'>
                 {timelineData[selectedTimeline].year}
               </div>
             </div>

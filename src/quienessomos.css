@@ -206,6 +206,7 @@
 }
 
 .up {
+  width: auto;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -300,4 +301,11 @@
   font-size: 4vw;
   font-family: 'Open Sans';
   cursor: pointer;
+}
+
+.year.title {
+  display: flex;
+  font-size: 700%;
+  color: #fff;
+  margin: 2%;
 }
