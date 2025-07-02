@@ -150,9 +150,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  gap: 90px;
-  /* Espacio entre logo y texto */
+  width: 90vw;
+  height: 10vh;
+  gap: 15%;
+  margin-left: -2%;
 }
 
 .police {

@@ -220,3 +220,13 @@
   justify-content: right;
   font-family: 'arial';
 }
+
+.info-email-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 10vh;
+  gap: 15%;
+  margin-left: 2%;
+}
