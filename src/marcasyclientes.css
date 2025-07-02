@@ -172,7 +172,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: #00f0ff;
+  background: #fff;
   transition: width 0.3s ease, left 0.3s ease;
   transform: translateX(-50%);
 }
@@ -192,4 +192,28 @@
   display: flex;
   background-color: #fff;
   color: #000;
+  flex-direction: column;
+}
+
+.title-white {
+  font-size: 20vh;
+  margin: 20px ;
+  font-family: 'arial';
+  font-weight:lighter
+}
+
+.info-left-down{
+  font-size: 8vh;
+  justify-content: left;
+  margin: 20px;
+  font-family: 'arial';
+}
+
+.info-right {
+  font-size: 2vw;
+  margin: 20px;
+  text-align: justify;
+  line-height: 1.5;
+  justify-content: right;
+  font-family: 'arial';
 }

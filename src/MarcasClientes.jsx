@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import './marcasyclientes.css';
 import backIcon from './assets/icons8-atras-48.png';
-import collage from './assets/COLLAGE.jpg';  
+import collage from './assets/COLLAGE.jpg';
 import logo_billa from './assets/logo_billabong.svg';
 import logo_jlo from './assets/logo_jlo.svg';
 import logo_reebok from './assets/logo_reebok.svg';
@@ -79,9 +79,9 @@ const logos = [
 
 const marcaslist = [
     { titulo: "VER TODAS", images: [mycaltec, mycquik, mycpolo, mycaero], logos: logos },
-    { titulo: "FULL BRAND MANAGEMENT",  images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[3], logos[11], logos[6], logos[2], logos[1], logos[9], logos[10], logos[0]] },
+    { titulo: "FULL BRAND MANAGEMENT", images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[3], logos[11], logos[6], logos[2], logos[1], logos[9], logos[10], logos[0]] },
     { titulo: "LICENCIAS", images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[20], logos[4], logos[15], logos[13], logos[18], logos[8], logos[5], logos[7], logos[12], logos[17]] },
-    { titulo: "DISTRIBUCIÓN",images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[16], logos[14]] },
+    { titulo: "DISTRIBUCIÓN", images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[16], logos[14]] },
 ];
 
 
@@ -184,7 +184,12 @@ function MarcasyClientes() {
             </div>
 
             <div className='info-white'>
-                <div className='title white'>Full Brand Management</div>
+                <div className='title-white'>Full Brand Management</div>
+                <div className='info-left-down'>Desarrollo — Diseño — Producción Marketing — Distribución</div>
+                <div className='info-right'>
+                    <strong>Union Group</strong> ofrece un servicio integral de gestión de marcas conocido como Full Brand Management. Este enfoque abarca todas las facetas del desarrollo y diseño de productos, así como la producción, y distribución de una marca en el mercado.
+                    Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.
+                </div>
             </div>
 
             <div className='info-email-logo'>
