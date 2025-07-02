@@ -183,6 +183,10 @@ function MarcasyClientes() {
                 </div>
             </div>
 
+            <div className='info-white'>
+                <div className='title white'>Full Brand Management</div>
+            </div>
+
             <div className='info-email-logo'>
                 <div className='info'>
                     <p>Alianzas globales, relaciones sólidas</p>

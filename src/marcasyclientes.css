@@ -187,3 +187,9 @@
   width: 80%;
   left: 50%;
 }
+
+.info-white {
+  display: flex;
+  background-color: #fff;
+  color: #000;
+}
