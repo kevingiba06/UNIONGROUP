@@ -30,6 +30,10 @@ import mycaltec from './assets/MYCALTEC.jpg';
 import mycquik from './assets/MYCQUIK.jpg';
 import mycpolo from './assets/MYCPOLO.jpg';
 import mycaero from './assets/MYCAERO.jpg';
+import brdblack from './assets/BRDBLACK.svg';
+import rbkblack from './assets/RBKBLACK.svg';
+import poloblack from './assets/POLOBLACK.svg';
+import jloblack from './assets/JLOBLACK.png';
 
 
 const logos = [
@@ -77,6 +81,34 @@ const logos = [
     { logo: logo_aero, url: 'https://www.aeropostale.com/?srsltid=AfmBOoqrCatki6WuMIDuTYdrA_T5oKpcWs5N7YqYHC5L1IexrmRjJlTv' },
 ];
 
+
+// Estado para el menú de logo-promesa
+const promesas = [
+    {
+        logo: jloblack,
+        nombre: 'JLO Jennifer Lopez',
+        texto: 'La colaboración entre Union Group y JLO Jennifer Lopez en Coppel ha dado lugar a una colección que combina sofisticación y un estilo inolvidable en México. La colección evoca la elegancia del Hollywood de épocas pasadas con un colorido vibrante, estampados fabulosos y detalles de vanguardia.'
+    },
+    {
+        logo: poloblack,
+        nombre: 'YorkTeam Polo Club',
+        texto: 'Desde 2012, gracias a Union Group, logramos expandir exitosamente la presencia de YorkTeam Polo Club en México, y en la actualidad, nuestros productos están disponibles en más de 1, 700 tiendas y boutiques en todo el país.Esta sólida colaboración es un reflejo de nuestro compromiso permanente con la difusión y expansión de la marca.'
+    },
+    {
+        logo: rbkblack,
+        nombre: 'Reebok',
+        texto: 'Desde 2023 Union Group ha desempeñado un papel fundamental en el éxito de Reebok en México, una marca global con una larga historia en el mundo del deporte. La visión de Reebok es convertirse en la mejor marca de fitness del mundo, y gracias a la colaboración estratégica con Union Group, ha logrado hacer avances significativos en esa dirección, en el mercado mexicano.'
+    },
+
+    {
+        logo: brdblack,
+        nombre: 'Boardriders',
+        texto: 'Con el respaldo y la gestión de Union Group, se asegura que Boardriders con inúe siendo un líder en el mundo de los deportes de acción y consolide la presencia de sus marcas en México. La introducción de nuevas marcas, la expansión de la base de clientes y la apertura de nuevos canales de distribución son parte de la visión de crecimiento que Union Group aporta.'
+    }
+];
+
+
+
 const marcaslist = [
     { titulo: "VER TODAS", images: [mycaltec, mycquik, mycpolo, mycaero], logos: logos },
     { titulo: "FULL BRAND MANAGEMENT", images: [mycaltec, mycquik, mycpolo, mycaero], logos: [logos[3], logos[11], logos[6], logos[2], logos[1], logos[9], logos[10], logos[0]] },
@@ -93,6 +125,9 @@ function MarcasyClientes() {
     const [collageIndex, setCollageIndex] = useState(0);
     // Slideshow state for marcas-left
     const [marcaImgIndex, setMarcaImgIndex] = useState(0);
+
+
+    const [promesaIndex, setPromesaIndex] = useState(0);
 
     // Memoize imagesArr for slideshow (prefer images, fallback to logos)
     const imagesArr = useMemo(() => {
@@ -189,6 +224,33 @@ function MarcasyClientes() {
                 <div className='info-right'>
                     <strong>Union Group</strong> ofrece un servicio integral de gestión de marcas conocido como Full Brand Management. Este enfoque abarca todas las facetas del desarrollo y diseño de productos, así como la producción, y distribución de una marca en el mercado.
                     Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.
+                </div>
+            </div>
+
+            <div className='mp'>Una marca es una promesa
+                <div className='ps'>Las promesas se cumplen</div>
+                <div className='logo-promesa'>
+                    <div className='logo-promesa-left'>
+                        <img src={promesas[promesaIndex].logo} alt="Logo promesa" style={{ height: '12vh' }} />
+                    </div>
+                    <div className='logo-promesa-center'>
+                        <span>{promesas[promesaIndex].texto}</span>
+                    </div>
+                    <div className='logo-promesa-right'>
+                        {/* Lista de opciones como textos clicables */}
+                        <div className='promesa-list'>
+                            {promesas.map((item, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`promesa-text${promesaIndex === idx ? ' active' : ''}`}
+                                    onClick={() => setPromesaIndex(idx)}
+                                    style={{ cursor: 'pointer', margin: '0 10px', fontWeight: promesaIndex === idx ? 'bold' : 'normal', textDecoration: promesaIndex === idx ? 'underline' : 'none' }}
+                                >
+                                    {item.nombre}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
 
