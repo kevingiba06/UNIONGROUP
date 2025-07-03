@@ -228,7 +228,7 @@ function MarcasyClientes() {
             </div>
 
             <div className='mp'>Una marca es una promesa
-                <div className='ps'>Las promesas se cumplen</div>
+                <div className='ps'><br/>Las promesas se cumplen<br/></div>
                 <div className='logo-promesa'>
                     <div className='logo-promesa-left'>
                         <img src={promesas[promesaIndex].logo} alt="Logo promesa" style={{ height: '12vh' }} />
@@ -259,7 +259,7 @@ function MarcasyClientes() {
                     <p>Alianzas globales, relaciones sólidas</p>
                 </div>
                 <div className='email'>
-                    recursoshumanos@uniongroup.mx
+                    pr@uniongroup.mx
                 </div>
                 <div className='years-logo-container'>
                     <span className='year'>1980</span>
