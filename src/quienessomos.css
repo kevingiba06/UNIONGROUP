@@ -25,6 +25,13 @@
   background-position: center;
 }
 
+.icon-svg {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 .text {
   display: flex;
   gap: 60px;

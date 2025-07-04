@@ -394,3 +394,10 @@
   filter: grayscale(0) brightness(1.1);
   transform: scale(1.08);
 }
+
+.icon-svg {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}

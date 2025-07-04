@@ -50,11 +50,11 @@ const timelineData = [
 ]
 
 const secData = [
-  {title: 'Perseverancia', description: 'Se firme y constante en todo\n lo que te propones, no te\n rindas ante las dificultades y\n lo alcanzarás.'},
-  {title: 'Humanismo', description: 'Somos empáticos,\n transparentes y respetamos a\n cada persona que nos rodea.'},
-  {title: 'Pasión', description: 'La honestidad, respeto por los\n demás, responsabilidad y\n cumplimiento.'},
-  {title: 'Integridad', description: 'Vive con emoción e\n intensidad, disfruta y ama lo\n que haces lleno de\n satisfacción.'},
-  {title: 'Lealtad', description: 'Demuestra tu entrega\n incondicional, fidelidad a tus\n principios y honestidad en\n todo el entorno.'},
+  { title: 'Perseverancia', description: 'Se firme y constante en todo\n lo que te propones, no te\n rindas ante las dificultades y\n lo alcanzarás.' },
+  { title: 'Humanismo', description: 'Somos empáticos,\n transparentes y respetamos a\n cada persona que nos rodea.' },
+  { title: 'Pasión', description: 'La honestidad, respeto por los\n demás, responsabilidad y\n cumplimiento.' },
+  { title: 'Integridad', description: 'Vive con emoción e\n intensidad, disfruta y ama lo\n que haces lleno de\n satisfacción.' },
+  { title: 'Lealtad', description: 'Demuestra tu entrega\n incondicional, fidelidad a tus\n principios y honestidad en\n todo el entorno.' },
 ]
 
 function Quienessomos() {
@@ -72,7 +72,9 @@ function Quienessomos() {
 
     <div className="home-container">
       <div className="logo-text">
-        <div className="logo"></div>
+        <Link to={"/"}>
+          <div className="logo"></div>
+        </Link>
         <div className="text">
           <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
           <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
@@ -108,15 +110,15 @@ function Quienessomos() {
       </div>
       <div className='center_2' style={{ backgroundColor: 'black' }}>
         <div className='text cif' data-aos="fade-right">
-          <p>Colaboradores<br/><br/><br/>Unidades vendidas al por menor</p>
+          <p>Colaboradores<br /><br /><br />Unidades vendidas al por menor</p>
         </div>
         <div className='texto' data-aos="fade-left">
-          <p>+400<br/><br/>+30M</p>
+          <p>+400<br /><br />+30M</p>
         </div>
       </div>
 
       <div className='title' data-aos="fade-up">
-        Nuestro Camino<br/>Histórico
+        Nuestro Camino<br />Histórico
       </div>
       <div className="timeline-container" data-aos="flip-left">
         <div className="timeline-left" data-aos="flip-left">

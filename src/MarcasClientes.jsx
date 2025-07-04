@@ -171,7 +171,9 @@ function MarcasyClientes() {
     return (
         <div className="home-container">
             <div className="logo-text">
-                <div className="logo"></div>
+                <Link to={"/"}>
+                    <div className="logo"></div>
+                </Link>
                 <div className="text">
                     <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
                     <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
@@ -232,7 +234,7 @@ function MarcasyClientes() {
             </div>
 
             <div className='mp'>Una marca es una promesa
-                <div className='ps'><br/>Las promesas se cumplen<br/></div>
+                <div className='ps'><br />Las promesas se cumplen<br /></div>
                 <div className='logo-promesa'>
                     <div className='logo-promesa-left'>
                         <img src={promesas[promesaIndex].logo} alt="Logo promesa" style={{ height: '12vh' }} />
