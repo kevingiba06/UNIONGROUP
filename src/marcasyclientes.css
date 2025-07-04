@@ -297,3 +297,58 @@
 .promesa-text:hover {
   color: #537e5f;
 }
+
+.videos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.clientes-principales {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 3rem 0 2rem 0;
+  gap: 2rem;
+}
+.clientes-left {
+  flex: 0 0 250px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 200px;
+}
+.clientes-right {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.clientes-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+}
+.cliente-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cliente-logo-img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(0.2);
+  transition: filter 0.2s, transform 0.2s;
+}
+.cliente-logo-img:hover {
+  filter: grayscale(0) brightness(1.1);
+  transform: scale(1.08);
+}

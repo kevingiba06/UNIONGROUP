@@ -36,6 +36,7 @@ import poloblack from './assets/POLOBLACK.svg';
 import jloblack from './assets/JLOBLACK.png';
 
 
+
 const logos = [
     /*0*/
     { logo: logo_billa, url: 'https://www.billabong.com/' },
@@ -87,23 +88,26 @@ const promesas = [
     {
         logo: jloblack,
         nombre: 'JLO Jennifer Lopez',
-        texto: 'La colaboración entre Union Group y JLO Jennifer Lopez en Coppel ha dado lugar a una colección que combina sofisticación y un estilo inolvidable en México. La colección evoca la elegancia del Hollywood de épocas pasadas con un colorido vibrante, estampados fabulosos y detalles de vanguardia.'
+        texto: 'La colaboración entre Union Group y JLO Jennifer Lopez en Coppel ha dado lugar a una colección que combina sofisticación y un estilo inolvidable en México. La colección evoca la elegancia del Hollywood de épocas pasadas con un colorido vibrante, estampados fabulosos y detalles de vanguardia.',
+        video: 'https://uniongroup.mx/wp-content/uploads/2024/07/JLO2.mp4'
     },
     {
         logo: poloblack,
         nombre: 'YorkTeam Polo Club',
-        texto: 'Desde 2012, gracias a Union Group, logramos expandir exitosamente la presencia de YorkTeam Polo Club en México, y en la actualidad, nuestros productos están disponibles en más de 1, 700 tiendas y boutiques en todo el país.Esta sólida colaboración es un reflejo de nuestro compromiso permanente con la difusión y expansión de la marca.'
+        texto: 'Desde 2012, gracias a Union Group, logramos expandir exitosamente la presencia de YorkTeam Polo Club en México, y en la actualidad, nuestros productos están disponibles en más de 1, 700 tiendas y boutiques en todo el país.Esta sólida colaboración es un reflejo de nuestro compromiso permanente con la difusión y expansión de la marca.',
+        video: 'https://uniongroup.mx/wp-content/uploads/2024/07/POLO.mp4'
     },
     {
         logo: rbkblack,
         nombre: 'Reebok',
-        texto: 'Desde 2023 Union Group ha desempeñado un papel fundamental en el éxito de Reebok en México, una marca global con una larga historia en el mundo del deporte. La visión de Reebok es convertirse en la mejor marca de fitness del mundo, y gracias a la colaboración estratégica con Union Group, ha logrado hacer avances significativos en esa dirección, en el mercado mexicano.'
+        texto: 'Desde 2023 Union Group ha desempeñado un papel fundamental en el éxito de Reebok en México, una marca global con una larga historia en el mundo del deporte. La visión de Reebok es convertirse en la mejor marca de fitness del mundo, y gracias a la colaboración estratégica con Union Group, ha logrado hacer avances significativos en esa dirección, en el mercado mexicano.',
+        video: 'https://uniongroup.mx/wp-content/uploads/2024/07/RBK_Harry-Potter_Kids.mp4'
     },
-
     {
         logo: brdblack,
         nombre: 'Boardriders',
-        texto: 'Con el respaldo y la gestión de Union Group, se asegura que Boardriders con inúe siendo un líder en el mundo de los deportes de acción y consolide la presencia de sus marcas en México. La introducción de nuevas marcas, la expansión de la base de clientes y la apertura de nuevos canales de distribución son parte de la visión de crecimiento que Union Group aporta.'
+        texto: 'Con el respaldo y la gestión de Union Group, se asegura que Boardriders con inúe siendo un líder en el mundo de los deportes de acción y consolide la presencia de sus marcas en México. La introducción de nuevas marcas, la expansión de la base de clientes y la apertura de nuevos canales de distribución son parte de la visión de crecimiento que Union Group aporta.',
+        video: 'https://uniongroup.mx/wp-content/uploads/2024/07/BOARDRIDERS.mp4'
     }
 ];
 
@@ -223,7 +227,7 @@ function MarcasyClientes() {
                 <div className='info-left-down'>Desarrollo — Diseño — Producción Marketing — Distribución</div>
                 <div className='info-right'>
                     <strong>Union Group</strong> ofrece un servicio integral de gestión de marcas conocido como Full Brand Management. Este enfoque abarca todas las facetas del desarrollo y diseño de productos, así como la producción, y distribución de una marca en el mercado.
-                    Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.
+                    Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.<br /><br />
                 </div>
             </div>
 
@@ -250,6 +254,27 @@ function MarcasyClientes() {
                                 </span>
                             ))}
                         </div>
+                    </div>
+                </div>
+                <div className='videos'>
+                    {promesas[promesaIndex].video && (
+                        <video key={promesas[promesaIndex].video} controls autoPlay width="800vw" style={{ marginTop: '8rem', borderRadius: '12px', maxHeight: '800px', background: '#000' }}>
+                            <source src={promesas[promesaIndex].video} type="video/mp4" />
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    )}
+                </div>
+            </div>
+
+            <div className='clientes-principales'>
+                <div className='clientes-left'>Clientes Principales</div>
+                <div className='clientes-right'>
+                    <div className='clientes-logos-grid'>
+                        {logos.slice(0, 20).map((logo, idx) => (
+                            <a key={idx} href={logo.url} target="_blank" rel="noopener noreferrer" className="cliente-logo-link">
+                                <img src={logo.logo} alt="Logo cliente" className="cliente-logo-img" />
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
