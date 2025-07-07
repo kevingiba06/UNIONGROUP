@@ -58,9 +58,11 @@ function HomePage() {
         { logo: logo_altec, url: 'https://www.alteclansing.com/collections/speakers?srsltid=AfmBOoqjFsu20_zJCSHP72PGcdbnU0mEpDYYOXe35S64zZqkuwcWWrnn' },
         { logo: logo_shaq, url: 'https://shaq.com/pages/shaq-footwear' },
         { logo: logo_cat, url: 'https://catfootwear.com.mx/?gad_source=1&gad_campaignid=21351108413&gbraid=0AAAAAoMoTsjrd2Qu9P7fM1NS666GVQA_E&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6gEqTm5BTdi91r1Fkh9tAJ6ff_T0c89mfl3xtJzxUuP2HRVmduR6TkaAgTGEALw_wcB' },
-        { logo: logo_board, url: 'https://www.boardriders.eu'},
-        { logo: logo_aero, url: 'https://www.aeropostale.com/?srsltid=AfmBOoqrCatki6WuMIDuTYdrA_T5oKpcWs5N7YqYHC5L1IexrmRjJlTv'},
+        { logo: logo_board, url: 'https://www.boardriders.eu' },
+        { logo: logo_aero, url: 'https://www.aeropostale.com/?srsltid=AfmBOoqrCatki6WuMIDuTYdrA_T5oKpcWs5N7YqYHC5L1IexrmRjJlTv' },
     ];
+
+    const [menuAbierto, setMenuAbierto] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -72,12 +74,18 @@ function HomePage() {
     return (
         <div className="home-container">
             <div className='logo-text'>
+                {/* Botón hamburguesa visible solo en móviles */}
+                <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
+                    {menuAbierto ? '✖' : '☰'}
+                </button>
                 <div className='logo'></div>
-                <div className='text'>
-                    <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
-                    <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
-                    <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
-                    <Link to={"/contacto"}>CONTACTO</Link>
+
+                {/* Menú de navegación con clase condicional */}
+                <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
+                    <Link to="/quienes-somos" onClick={() => setMenuAbierto(false)}>QUIENES SOMOS</Link>
+                    <Link to="/que-hacemos" onClick={() => setMenuAbierto(false)}>QUE HACEMOS</Link>
+                    <Link to="/marcas-clientes" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
+                    <Link to="/contacto" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
                 </div>
             </div>
 

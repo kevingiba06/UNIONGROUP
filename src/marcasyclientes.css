@@ -19,11 +19,45 @@
 }
 
 .text {
-  display: flex;
+  display: none;
   gap: 60px;
   /* ← espacio entre los <a> */
   color: #fff;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 769px) {
+  .text {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    text-align: left;
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: right;
+    z-index: 1001;
+  }
+  .text.mostrar {
+    display: flex;
+  }
+  .text a {
+    margin: 0.5rem 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
 }
 
 .text a {
