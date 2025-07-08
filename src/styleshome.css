@@ -1,3 +1,53 @@
+/* Dropdown MARCAS & CLIENTES */
+.dropdown-marcas-clientes {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.95);
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2000;
+  right: 0;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.dropdown-marcas-clientes:hover .dropdown-content,
+.dropdown-marcas-clientes:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #537e5f;
+  color: #fff;
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 

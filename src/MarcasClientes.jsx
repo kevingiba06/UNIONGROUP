@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link
+import { Link, useLocation } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import './marcasyclientes.css';
@@ -34,6 +34,26 @@ import brdblack from './assets/BRDBLACK.svg';
 import rbkblack from './assets/RBKBLACK.svg';
 import poloblack from './assets/POLOBLACK.svg';
 import jloblack from './assets/JLOBLACK.png';
+import coppel from './assets/clientcoppel.svg';
+import suburbia from './assets/clientsuburbia.svg';
+import sears from './assets/clientsears.svg';
+import Bherma from './assets/clientbhermanos.svg';
+import marti from './assets/clientmarti.svg';
+import costco from './assets/clientcostco.svg';
+import comer from './assets/clientlacomer.svg';
+import walmart from './assets/clientwalmart.svg';
+import soriana from './assets/clientsoriana.svg';
+import ps from './assets/clientpriceshoes.svg';
+import sanb from './assets/clientsanborns.svg';
+import woolw from './assets/clientwoolworth.svg';
+import sams from './assets/clientsamsclub.svg';
+import inn from './assets/clientinnovasport.svg';
+import cklass from './assets/clientcklass.svg';
+import dport from './assets/clientdportennis.svg';
+import andrea from './assets/clientandrea.svg';
+import city from './assets/clientcityclub.svg';
+import ph from './assets/clientpalacio.svg';
+import liverpool from './assets/clientliverpool.svg';
 
 
 
@@ -80,6 +100,49 @@ const logos = [
     { logo: logo_board, url: 'https://www.boardriders.eu' },
     /*20*/
     { logo: logo_aero, url: 'https://www.aeropostale.com/?srsltid=AfmBOoqrCatki6WuMIDuTYdrA_T5oKpcWs5N7YqYHC5L1IexrmRjJlTv' },
+];
+
+const logoclientes = [
+    /*0*/
+    { logo: coppel },
+    /*1*/
+    { logo: suburbia },
+    /*2*/
+    { logo: sears },
+    /*3*/
+    { logo: Bherma },
+    /*4*/
+    { logo: marti },
+    /*5*/
+    { logo: costco },
+    /*6*/
+    { logo: comer },
+    /*7*/
+    { logo: walmart },
+    /*8*/
+    { logo: soriana },
+    /*9*/
+    { logo: ps },
+    /*10*/
+    { logo: sanb },
+    /*11*/
+    { logo: woolw },
+    /*12*/
+    { logo: sams },
+    /*13*/
+    { logo: inn },
+    /*14*/
+    { logo: cklass },
+    /*15*/
+    { logo: dport },
+    /*16*/
+    { logo: andrea },
+    /*17*/
+    { logo: city },
+    /*18*/
+    { logo: ph },
+    /*19*/
+    { logo: liverpool }
 ];
 
 
@@ -130,8 +193,8 @@ function MarcasyClientes() {
     // Slideshow state for marcas-left
     const [marcaImgIndex, setMarcaImgIndex] = useState(0);
 
-
     const [promesaIndex, setPromesaIndex] = useState(0);
+    const location = useLocation();
 
     // Memoize imagesArr for slideshow (prefer images, fallback to logos)
     const imagesArr = useMemo(() => {
@@ -146,6 +209,26 @@ function MarcasyClientes() {
             once: false,
         });
     }, []);
+
+    // Detecta si hay un parámetro promesa en la URL y lo aplica
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const promesaParam = params.get('promesa');
+        if (promesaParam !== null && !isNaN(Number(promesaParam))) {
+            setPromesaIndex(Number(promesaParam));
+            setTimeout(() => {
+                const mpSection = document.querySelector('.mp');
+                if (mpSection) {
+                    mpSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Reproduce el video automáticamente
+                const video = mpSection?.querySelector('video');
+                if (video) {
+                    video.play();
+                }
+            }, 300);
+        }
+    }, [location.search]);
 
     // Slideshow effect for collage
     useEffect(() => {
@@ -168,13 +251,18 @@ function MarcasyClientes() {
         return () => clearInterval(interval);
     }, [selectedmarca, imagesArr]);
 
+    const [menuAbierto, setMenuAbierto] = useState(false);
+
     return (
         <div className="home-container">
-            <div className="logo-text">
-                <Link to={"/"}>
-                    <div className="logo"></div>
-                </Link>
-                <div className="text">
+            <div className='logo-text'>
+                <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
+                    {menuAbierto ? '✖' : '☰'}
+                </button>
+                <div className='logo'></div>
+
+                {/* Menú de navegación con clase condicional */}
+                <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
                     <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
                     <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
                     <Link to={"/contacto"}>CONTACTO</Link>
@@ -272,7 +360,7 @@ function MarcasyClientes() {
                 <div className='clientes-left'>Clientes Principales</div>
                 <div className='clientes-right'>
                     <div className='clientes-logos-grid'>
-                        {logos.slice(0, 20).map((logo, idx) => (
+                        {logoclientes.slice(0, 20).map((logo, idx) => (
                             <a key={idx} href={logo.url} target="_blank" rel="noopener noreferrer" className="cliente-logo-link">
                                 <img src={logo.logo} alt="Logo cliente" className="cliente-logo-img" />
                             </a>

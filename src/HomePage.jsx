@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import './styleshome.css';
 import { Link } from 'react-router-dom';
 import fondoJlo from './assets/fondojlo.jpg';
@@ -71,6 +72,17 @@ function HomePage() {
         return () => clearInterval(interval);
     }, []);
 
+    // Estado para controlar el hover y el timeout del dropdown
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownTimeoutRef = React.useRef();
+
+    // Limpia el timeout si el componente se desmonta
+    useEffect(() => {
+        return () => {
+            if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+        };
+    }, []);
+
     return (
         <div className="home-container">
             <div className='logo-text'>
@@ -83,7 +95,44 @@ function HomePage() {
                 <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
                     <Link to="/quienes-somos" onClick={() => setMenuAbierto(false)}>QUIENES SOMOS</Link>
                     <Link to="/que-hacemos" onClick={() => setMenuAbierto(false)}>QUE HACEMOS</Link>
-                    <Link to="/marcas-clientes" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
+                    {/* Dropdown MARCAS & CLIENTES */}
+                    <div
+                        className="dropdown-marcas-clientes"
+                        onMouseEnter={() => {
+                            if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                            setDropdownOpen(true);
+                        }}
+                        onMouseLeave={() => {
+                            dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400); // 400ms delay
+                        }}
+                        tabIndex={0}
+                        onFocus={() => setDropdownOpen(true)}
+                        onBlur={() => {
+                            dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+                        }}
+                    >
+                        <Link to="/marcas-clientes" className="dropdown-toggle" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
+                        <div className="dropdown-content" style={{ display: dropdownOpen ? 'block' : 'none' }}>
+                            {[
+                                { nombre: 'JLO Jennifer Lopez', idx: 0 },
+                                { nombre: 'YorkTeam Polo Club', idx: 1 },
+                                { nombre: 'Reebok', idx: 2 },
+                                { nombre: 'Boardriders', idx: 3 }
+                            ].map((item) => (
+                                <button
+                                    key={item.idx}
+                                    className="dropdown-item"
+                                    onClick={() => {
+                                        setMenuAbierto(false);
+                                        window.location.href = `/marcas-clientes?promesa=${item.idx}#mp`;
+                                    }}
+                                    style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', width: '100%', textAlign: 'left', padding: '8px 16px' }}
+                                >
+                                    {item.nombre}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
                     <Link to="/contacto" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
                 </div>
             </div>

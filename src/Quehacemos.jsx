@@ -26,6 +26,8 @@ import jj from './assets/JENIFER Y JOSE.jpg';
 import tlt from './assets/TODOSLOSTAWIL.jpg';
 
 function Quehacemos() {
+  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const dropdownTimeoutRef = React.useRef();
   const currentYear = new Date().getFullYear();
   useEffect(() => {
     AOS.init({
@@ -81,7 +83,43 @@ function Quehacemos() {
         {/* Menú de navegación con clase condicional */}
         <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
           <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
-          <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
+          {/* Dropdown MARCAS & CLIENTES */}
+          <div
+            className="dropdown-marcas-clientes"
+            onMouseEnter={() => {
+              if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+              setDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+            }}
+            tabIndex={0}
+            onFocus={() => setDropdownOpen(true)}
+            onBlur={() => {
+              dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+            }}
+          >
+            <Link to={"/marcas-clientes"} className="dropdown-toggle">MARCAS & CLIENTES</Link>
+            <div className="dropdown-content" style={{ display: dropdownOpen ? 'block' : 'none' }}>
+              {[
+                { nombre: 'JLO Jennifer Lopez', idx: 0 },
+                { nombre: 'YorkTeam Polo Club', idx: 1 },
+                { nombre: 'Reebok', idx: 2 },
+                { nombre: 'Boardriders', idx: 3 }
+              ].map((item) => (
+                <button
+                  key={item.idx}
+                  className="dropdown-item"
+                  onClick={() => {
+                    window.location.href = `/marcas-clientes?promesa=${item.idx}#mp`;
+                  }}
+                  style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', width: '100%', textAlign: 'left', padding: '8px 16px' }}
+                >
+                  {item.nombre}
+                </button>
+              ))}
+            </div>
+          </div>
           <Link to={"/contacto"}>CONTACTO</Link>
           <Link to={"/"}>
             <img src={backIcon} alt="Regresar" className="icon-svg" />
