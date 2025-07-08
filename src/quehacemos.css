@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+ 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   /* evita scroll horizontal */
 }
-
+ 
 .home-container {
   color: #fff;
   width: auto;
@@ -17,15 +17,22 @@ body {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
 }
-
+ 
 .logo {
   display: flex;
   width: 120px;
-  height: auto;
+  height: 50px;
   background-image: url(assets/logo_2.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.icon-svg {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .text {
@@ -35,6 +42,7 @@ body {
   color: #fff;
   font-size: 1.5rem;
 }
+
 @media screen and (min-width: 769px) {
   .text {
     display: flex;
@@ -46,6 +54,7 @@ body {
     width: auto;
   }
 }
+
 @media screen and (max-width: 768px) {
   .text {
     display: none;
@@ -86,14 +95,7 @@ body {
   gap: 150px;
   /* Espacio entre logo y texto */
 }
-
-.icon-svg {
-  width: 20px;
-  height: auto;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
+ 
 .center {
   display: flex;
   flex-direction: column;
@@ -104,7 +106,7 @@ body {
   margin-top: 0%;
   background-color: #808080;
 }
-
+ 
 .center2 {
   display: flex;
   flex-direction: row;
@@ -114,7 +116,7 @@ body {
   white-space: pre-line;
   height: auto;
 }
-
+ 
 .center3 {
   display: flex;
   flex-direction: column;
@@ -125,13 +127,13 @@ body {
   margin-top: 0%;
   background-color: #808080;
 }
-
+ 
 .img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
+ 
 .imagenes-seleccion {
   display: flex;
   justify-content: center;
@@ -146,7 +148,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
+ 
 .imagen-seleccion {
   max-width: 100%;
   width: auto;
@@ -157,7 +159,7 @@ body {
   /* Ajusta a lo que necesites */
   border-radius: 10px;
 }
-
+ 
 .title {
   display: flex;
   font-size: 1000%;
@@ -165,31 +167,14 @@ body {
   margin: 2%;
   font-family: 'Montserrat', sans-serif;
 }
-
-.info {
-  display: flex;
-  font-size: 200%;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-}
-
+ 
 .years-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
 }
-
-.info-email-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90vw;
-  height: 10vh;
-  gap: 15%;
-  margin-left: -2%;
-}
-
+ 
 .police {
   display: flex;
   flex-direction: column;
@@ -200,7 +185,7 @@ body {
   margin-top: 20%;
   font-size: 14px;
 }
-
+ 
 .selector-container {
   display: flex;
   flex-direction: row;
@@ -216,11 +201,11 @@ body {
   font: 1em sans-serif;;
   margin: 0%;
 }
-
+ 
 .contenido-seleccionado {
   margin-top: 20px;
 }
-
+ 
 .img-expand {
   width: 100%;
   height: auto;
@@ -228,7 +213,7 @@ body {
   object-fit: contain;
   display: block;
 }
-
+ 
 .title.white {
   display: flex;
   font-size: 1000%;

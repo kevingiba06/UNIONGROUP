@@ -68,14 +68,20 @@ function Quienessomos() {
       once: false,
     });
   }, []);
+
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   return (
 
     <div className="home-container">
-      <div className="logo-text">
-        <Link to={"/"}>
-          <div className="logo"></div>
-        </Link>
-        <div className="text">
+      <div className='logo-text'>
+        <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
+          {menuAbierto ? '✖' : '☰'}
+        </button>
+        <div className='logo'></div>
+
+        {/* Menú de navegación con clase condicional */}
+        <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
           <Link to={"/que-hacemos"}>QUE HACEMOS</Link>
           <Link to={"/marcas-clientes"}>MARCAS & CLIENTES</Link>
           <Link to={"/contacto"}>CONTACTO</Link>

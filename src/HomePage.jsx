@@ -74,7 +74,6 @@ function HomePage() {
     return (
         <div className="home-container">
             <div className='logo-text'>
-                {/* Botón hamburguesa visible solo en móviles */}
                 <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
                     {menuAbierto ? '✖' : '☰'}
                 </button>
