@@ -9,13 +9,13 @@ function Contacto() {
 
     const [menuAbierto, setMenuAbierto] = useState(false);
 
-       const currentYear = new Date().getFullYear();
-        useEffect(() => {
-            AOS.init({
-                duration: 500,
-                once: false,
-            });
-        }, []);
+    const currentYear = new Date().getFullYear();
+    useEffect(() => {
+        AOS.init({
+            duration: 500,
+            once: false,
+        });
+    }, []);
 
     return (
         <div className="home-container">
@@ -23,7 +23,9 @@ function Contacto() {
                 <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
                     {menuAbierto ? '✖' : '☰'}
                 </button>
-                <div className='logo'></div>
+                <Link to={"/"}>
+                    <div className='logo'></div>
+                </Link>
 
                 {/* Menú de navegación con clase condicional */}
                 <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
@@ -73,7 +75,7 @@ function Contacto() {
                 </div>
             </div>
 
-                       <div className='info-email-logo'>
+            <div className='info-email-logo'>
                 <div className='info'>
                     <p>Alianzas globales, relaciones sólidas</p>
                 </div>

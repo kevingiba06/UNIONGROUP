@@ -25,6 +25,7 @@
   color: #fff;
   font-size: 1.5rem;
 }
+
 @media screen and (min-width: 769px) {
   .text {
     display: flex;
@@ -36,6 +37,7 @@
     width: auto;
   }
 }
+
 @media screen and (max-width: 768px) {
   .text {
     display: none;
@@ -49,9 +51,11 @@
     text-align: right;
     z-index: 1001;
   }
+
   .text.mostrar {
     display: flex;
   }
+
   .text a {
     margin: 0.5rem 0;
     color: white;
@@ -68,13 +72,6 @@
 
 .text a:hover {
   color: #537e5f;
-}
-
-.logo-text {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-  /* Espacio entre logo y texto */
 }
 
 .center-left-align {
@@ -106,7 +103,7 @@
   text-align: justify;
 }
 
-.img{
+.img {
   width: 100%;
   height: 100%;
   margin-top: 2%;
@@ -159,9 +156,12 @@
   margin-top: 32px;
   justify-items: center;
   align-items: center;
-  height: 300px;         /* igual que la imagen */
-  overflow-y: auto;      /* permite scroll vertical */
-  padding-right: 8px;    /* opcional: espacio para la barra de scroll */
+  height: 300px;
+  /* igual que la imagen */
+  overflow-y: auto;
+  /* permite scroll vertical */
+  padding-right: 8px;
+  /* opcional: espacio para la barra de scroll */
 }
 
 .marcas-left {
@@ -234,12 +234,12 @@
 
 .title-white {
   font-size: 20vh;
-  margin: 20px ;
+  margin: 20px;
   font-family: 'arial';
-  font-weight:lighter
+  font-weight: lighter
 }
 
-.info-left-down{
+.info-left-down {
   font-size: 8vh;
   justify-content: left;
   margin: 20px;
@@ -255,17 +255,62 @@
   font-family: 'arial';
 }
 
+/* Ajuste responsivo para info-email-logo */
 .info-email-logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90vw;
-  height: 10vh;
-  gap: 15%;
-  margin-left: 2%;
+  max-width: 1400px;
+  min-width: 260px;
+  height: auto;
+  min-height: 70px;
+  gap: 8vw;
+  margin: 0 auto 20px auto;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-.mp{
+@media screen and (max-width: 1024px) {
+  .info-email-logo {
+    width: 98vw;
+    gap: 4vw;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info-email-logo {
+    flex-direction: column;
+    align-items: stretch;
+    width: 98vw;
+    gap: 10px;
+    padding: 10px 0 20px 0;
+    font-size: 0.95rem;
+    min-height: unset;
+  }
+  .info-email-logo .info,
+  .info-email-logo .email,
+  .info-email-logo .years-logo-container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-email-logo {
+    width: 100vw;
+    gap: 6px;
+    padding: 8px 0 12px 0;
+    font-size: 0.9rem;
+  }
+}
+
+.mp {
   font-size: 5vh;
   background: #fff;
   color: #000;
@@ -273,7 +318,7 @@
   font-family: 'arial';
 }
 
-.ps{
+.ps {
   font-size: 10vh;
 }
 
@@ -328,6 +373,7 @@
     gap: 2vw;
     padding: 2vw 0;
   }
+
   .logo-promesa-left,
   .logo-promesa-center,
   .logo-promesa-right {
@@ -337,6 +383,7 @@
     justify-content: center;
     text-align: center;
   }
+
   .logo-promesa-center {
     font-size: 5vw;
   }
@@ -359,7 +406,7 @@
 .promesa-text {
   cursor: pointer;
   margin: 0 0 0 0;
-  font-size:4vh;
+  font-size: 4vh;
   color: #222;
   transition: color 0.2s;
 }
@@ -374,7 +421,7 @@
   color: #537e5f;
 }
 
-.videos{
+.videos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,6 +435,7 @@
   align-items: flex-start;
   gap: 2rem;
 }
+
 .clientes-left {
   font-size: 2.5rem;
   font-weight: bold;
@@ -397,12 +445,14 @@
   justify-content: flex-start;
   margin-left: 3%;
 }
+
 .clientes-right {
   flex: 1 1 auto;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
 }
+
 .clientes-logos-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -411,11 +461,13 @@
   width: 100%;
   max-width: 700px;
 }
+
 .cliente-logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .cliente-logo-img {
   width: 100px;
   height: 80px;
@@ -423,6 +475,7 @@
   filter: grayscale(0.2);
   transition: filter 0.2s, transform 0.2s;
 }
+
 .cliente-logo-img:hover {
   filter: grayscale(0) brightness(1.1);
   transform: scale(1.08);

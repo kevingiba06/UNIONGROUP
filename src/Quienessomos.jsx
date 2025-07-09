@@ -80,7 +80,9 @@ function Quienessomos() {
         <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
           {menuAbierto ? '✖' : '☰'}
         </button>
-        <div className='logo'></div>
+        <Link to={"/"}>
+          <div className='logo'></div>
+        </Link>
 
         {/* Menú de navegación con clase condicional */}
         <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>

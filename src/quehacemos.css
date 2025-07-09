@@ -88,13 +88,6 @@ body {
 .text a:hover {
   color: #537e5f;
 }
-
-.logo-text {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-  /* Espacio entre logo y texto */
-}
  
 .center {
   display: flex;

@@ -89,7 +89,9 @@ function HomePage() {
                 <button className="menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
                     {menuAbierto ? '✖' : '☰'}
                 </button>
-                <div className='logo'></div>
+                <Link to={"/"}>
+                    <div className='logo'></div>
+                </Link>
 
                 {/* Menú de navegación con clase condicional */}
                 <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
@@ -99,20 +101,41 @@ function HomePage() {
                     <div
                         className="dropdown-marcas-clientes"
                         onMouseEnter={() => {
-                            if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
-                            setDropdownOpen(true);
+                            if (window.innerWidth >= 769) {
+                                if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                                setDropdownOpen(true);
+                            }
                         }}
                         onMouseLeave={() => {
-                            dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400); // 400ms delay
+                            if (window.innerWidth >= 769) {
+                                dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+                            }
                         }}
                         tabIndex={0}
-                        onFocus={() => setDropdownOpen(true)}
+                        onFocus={() => {
+                            if (window.innerWidth >= 769) setDropdownOpen(true);
+                        }}
                         onBlur={() => {
-                            dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+                            if (window.innerWidth >= 769) dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
                         }}
                     >
-                        <Link to="/marcas-clientes" className="dropdown-toggle" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
-                        <div className="dropdown-content" style={{ display: dropdownOpen ? 'block' : 'none' }}>
+                        <Link to="/marcas-clientes" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
+                        {/* Dropdown solo visible en desktop al hacer hover/focus, en mobile solo si menú abierto */}
+                        <div
+                            className="dropdown-content"
+                            style={{
+                                display:
+                                    (window.innerWidth >= 769 && dropdownOpen)
+                                        ? 'block'
+                                        : (window.innerWidth < 769 && menuAbierto ? 'block' : 'none'),
+                                position: window.innerWidth < 769 ? 'static' : 'absolute',
+                                background: window.innerWidth < 769 ? 'none' : 'rgba(0,0,0,0.95)',
+                                boxShadow: window.innerWidth < 769 ? 'none' : undefined,
+                                minWidth: window.innerWidth < 769 ? 'unset' : '220px',
+                                marginTop: window.innerWidth < 769 ? 0 : 8,
+                                borderRadius: window.innerWidth < 769 ? 0 : 8
+                            }}
+                        >
                             {[
                                 { nombre: 'JLO Jennifer Lopez', idx: 0 },
                                 { nombre: 'YorkTeam Polo Club', idx: 1 },

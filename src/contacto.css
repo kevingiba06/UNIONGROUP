@@ -1,29 +1,31 @@
 .home-container {
-    color: #fff;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Open Sans';
+  color: #fff;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Open Sans';
 }
 
 .logo {
-    display: flex;
-    width: 120px;
-    height: 50px;
-    background-image: url(assets/logo_2.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  display: flex;
+  width: 120px;
+  height: 50px;
+  background-image: url(assets/logo_2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .text {
   display: none;
-  gap: 60px; /* ← espacio entre los <a> */
+  gap: 60px;
+  /* ← espacio entre los <a> */
   color: #fff;
   font-size: 1.5rem;
 }
+
 @media screen and (min-width: 769px) {
   .text {
     display: flex;
@@ -35,6 +37,7 @@
     width: auto;
   }
 }
+
 @media screen and (max-width: 768px) {
   .text {
     display: none;
@@ -48,9 +51,11 @@
     text-align: right;
     z-index: 1001;
   }
+
   .text.mostrar {
     display: flex;
   }
+
   .text a {
     margin: 0.5rem 0;
     color: white;
@@ -70,16 +75,10 @@
 }
 
 .logo-text {
-    display: flex;
-    align-items: center;
-    gap: 150px;
-    /* Espacio entre logo y texto */
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #000; /* o el color de fondo de tu menú */
-    width: 100%;
-    padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
 }
 
 .contacto {
@@ -90,6 +89,7 @@
   width: 100%;
   font-family: 'arial';
 }
+
 .contacto-left {
   font-size: 2.2rem;
   font-weight: lighter;
@@ -97,11 +97,13 @@
   text-align: center;
   padding-top: 2%;
 }
+
 .contacto-right {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .form-contacto {
   display: flex;
   flex-direction: column;
@@ -109,6 +111,7 @@
   width: 100%;
   max-width: 400px;
 }
+
 .form-contacto input,
 .form-contacto textarea {
   width: 100%;
@@ -117,6 +120,7 @@
   border: 1px solid #ccc;
   font-size: 1rem;
 }
+
 .form-contacto button {
   padding: 0.7rem;
   border-radius: 6px;
@@ -127,11 +131,12 @@
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .form-contacto button:hover {
   background: #395c44;
 }
 
-.title-ubicacion{
+.title-ubicacion {
   font-size: 2vw;
   padding-top: 5%;
 }

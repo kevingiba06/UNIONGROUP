@@ -213,14 +213,59 @@
   gap: 15px;
 }
 
+/* Ajuste responsivo para info-email-logo */
 .info-email-logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90vw;
-  height: 10vh;
-  gap: 15%;
-  margin-left: -2%;
+  max-width: 1400px;
+  min-width: 260px;
+  height: auto;
+  min-height: 70px;
+  gap: 8vw;
+  margin: 0 auto 20px auto;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .info-email-logo {
+    width: 98vw;
+    gap: 4vw;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info-email-logo {
+    flex-direction: column;
+    align-items: stretch;
+    width: 98vw;
+    gap: 10px;
+    padding: 10px 0 20px 0;
+    font-size: 0.95rem;
+    min-height: unset;
+  }
+  .info-email-logo .info,
+  .info-email-logo .email,
+  .info-email-logo .years-logo-container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-email-logo {
+    width: 100vw;
+    gap: 6px;
+    padding: 8px 0 12px 0;
+    font-size: 0.7rem;
+  }
 }
 
 .police {
