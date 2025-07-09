@@ -74,4 +74,64 @@
     align-items: center;
     gap: 150px;
     /* Espacio entre logo y texto */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #000; /* o el color de fondo de tu menú */
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  font-family: 'arial';
+}
+.contacto-left {
+  font-size: 2.2rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 2%;
+}
+.contacto-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 400px;
+}
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.form-contacto button {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background: #537e5f;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.form-contacto button:hover {
+  background: #395c44;
+}
+
+.title-ubicacion{
+  font-size: 2vw;
+  padding-top: 5%;
 }
