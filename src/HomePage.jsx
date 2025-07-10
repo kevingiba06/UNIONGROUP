@@ -129,11 +129,9 @@ function HomePage() {
                                         ? 'block'
                                         : (window.innerWidth < 769 && menuAbierto ? 'block' : 'none'),
                                 position: window.innerWidth < 769 ? 'static' : 'absolute',
-                                background: window.innerWidth < 769 ? 'none' : 'rgba(0,0,0,0.95)',
+                                background: window.innerWidth < 769 ? 'none' : 'rgba(104, 104, 104, 0.95)',
                                 boxShadow: window.innerWidth < 769 ? 'none' : undefined,
-                                minWidth: window.innerWidth < 769 ? 'unset' : '220px',
-                                marginTop: window.innerWidth < 769 ? 0 : 8,
-                                borderRadius: window.innerWidth < 769 ? 0 : 8
+                                marginTop: window.innerWidth < 769 ? 0 : 8
                             }}
                         >
                             {[
@@ -149,7 +147,7 @@ function HomePage() {
                                         setMenuAbierto(false);
                                         window.location.href = `/marcas-clientes?promesa=${item.idx}#mp`;
                                     }}
-                                    style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', width: '100%', textAlign: 'left', padding: '8px 16px' }}
+                                    style={{ color: 'white', cursor: 'pointer', textAlign: 'right' }}
                                 >
                                     {item.nombre}
                                 </button>

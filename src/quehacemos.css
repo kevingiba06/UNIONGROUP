@@ -160,6 +160,16 @@ body {
   margin: 2%;
   font-family: 'Montserrat', sans-serif;
 }
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 9vw;
+  }
+
+  .titlee {
+    font-size: 4vw;
+  }
+}
  
 .years-logo-container {
   display: flex;

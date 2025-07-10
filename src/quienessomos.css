@@ -65,9 +65,11 @@
     text-align: right;
     z-index: 1001;
   }
+
   .text.mostrar {
     display: flex;
   }
+
   .text a {
     margin: 0.5rem 0;
     color: white;
@@ -117,9 +119,11 @@ title p {
   margin-left: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .title {
-    font-size: 4vw;
+    font-size: 9vw;
+    font-family: 'Open Sans';
+    font-weight: bolder;
   }
 }
 
@@ -141,6 +145,13 @@ title p {
   font-size: 40px;
   margin-left: 3%;
   font-family: 'NT Nexus';
+}
+
+@media (max-width: 800px) {
+  .texto {
+    font-size: 5vw;
+    font-family: 'Open Sans';
+  }
 }
 
 .center1 {
@@ -174,7 +185,8 @@ title p {
 .tex.cif {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Opcional, centra el texto horizontalmente */
+  align-items: center;
+  /* Opcional, centra el texto horizontalmente */
 }
 
 .timeline-container {
@@ -246,7 +258,8 @@ title p {
   max-height: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
-  object-fit: contain; /* Mantiene la proporción y rellena el div */
+  object-fit: contain;
+  /* Mantiene la proporción y rellena el div */
   display: block;
 }
 
@@ -294,9 +307,11 @@ title p {
   width: 100%;
   height: 100%;
   text-align: center;
-  font-size: 1.7vw; /* Escala con el ancho de la pantalla */
+  font-size: 1.7vw;
+  /* Escala con el ancho de la pantalla */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  word-break: break-word; /* Evita desbordamiento */
+  word-break: break-word;
+  /* Evita desbordamiento */
 }
 
 /* Ajusta el tamaño en pantallas pequeñas */
@@ -392,4 +407,11 @@ title p {
   .year.title {
     font-size: 4vw;
   }
+}
+
+.logo_texto {
+  width: 10%;
+  height: 10%;
+  max-width: 100%;
+  max-height: 100%;
 }

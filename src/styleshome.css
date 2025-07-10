@@ -1,5 +1,6 @@
 /* Dropdown MARCAS & CLIENTES */
 .dropdown-marcas-clientes {
+  background-color: #000000;
   position: relative;
   display: inline-block;
 }
@@ -14,15 +15,9 @@
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0,0,0,0.95);
+  background-color: #000000f2;
   min-width: 220px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2000;
-  right: 0;
   border-radius: 8px;
-  margin-top: 8px;
 }
 
 .dropdown-marcas-clientes:hover .dropdown-content,
@@ -239,7 +234,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .info-email-logo {
     flex-direction: column;
     align-items: stretch;
