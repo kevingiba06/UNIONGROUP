@@ -220,7 +220,7 @@ title p {
 
 @media (max-width: 600px) {
   .timeline-year {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 
@@ -277,6 +277,29 @@ title p {
   color: #fff;
   margin-bottom: 10px;
   font-family: 'NTNeussRegular';
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+    width: 100%;
+  }
+
+  .timeline-left {
+  width: 50%;
+}
+
+  .timeline-right {
+    width: 50%;
+  }
+
+  .timeline-right img {
+    width: 50vw;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 .up {

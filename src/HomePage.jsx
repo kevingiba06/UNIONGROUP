@@ -129,9 +129,8 @@ function HomePage() {
                                         ? 'block'
                                         : (window.innerWidth < 769 && menuAbierto ? 'block' : 'none'),
                                 position: window.innerWidth < 769 ? 'static' : 'absolute',
-                                background: window.innerWidth < 769 ? 'none' : 'rgba(104, 104, 104, 0.95)',
-                                boxShadow: window.innerWidth < 769 ? 'none' : undefined,
-                                marginTop: window.innerWidth < 769 ? 0 : 8
+                                background: window.innerWidth < 769 ? 'none' : 'rgba(0, 0, 0, 0.95)',
+                                boxShadow: window.innerWidth < 769 ? 'none' : undefined
                             }}
                         >
                             {[

@@ -1,48 +1,3 @@
-/* Dropdown MARCAS & CLIENTES */
-.dropdown-marcas-clientes {
-  background-color: #000000;
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0 10px;
-}
-
-.dropdown-content {
-  background-color: #000000f2;
-  min-width: 220px;
-  border-radius: 8px;
-}
-
-.dropdown-marcas-clientes:hover .dropdown-content,
-.dropdown-marcas-clientes:focus-within .dropdown-content {
-  display: block;
-}
-
-.dropdown-item {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.dropdown-item:hover {
-  background-color: #537e5f;
-  color: #fff;
-}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -175,14 +130,14 @@
 .info {
   font-family: 'Tahoma';
   color: #fff;
-  font-size: 40px;
+  font-size: 3vw;
   text-align: center;
 }
 
 .email {
   font-family: 'Tahoma';
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5vw;
   text-align: center;
 }
 
@@ -216,20 +171,12 @@
   width: 90vw;
   max-width: 1400px;
   min-width: 260px;
-  height: auto;
-  min-height: 70px;
-  gap: 8vw;
-  margin: 0 auto 20px auto;
-  padding: 10px 0;
-  flex-wrap: wrap;
-  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
   .info-email-logo {
     width: 98vw;
     gap: 4vw;
-    padding: 10px 0;
     font-size: 1rem;
   }
 }
@@ -240,7 +187,6 @@
     align-items: stretch;
     width: 98vw;
     gap: 10px;
-    padding: 10px 0 20px 0;
     font-size: 0.95rem;
     min-height: unset;
   }
@@ -258,7 +204,6 @@
   .info-email-logo {
     width: 100vw;
     gap: 6px;
-    padding: 8px 0 12px 0;
     font-size: 0.7rem;
   }
 }
@@ -381,4 +326,52 @@
   .text.mostrar {
     display: flex;
   }
+}
+
+/* Dropdown MARCAS & CLIENTES */
+.dropdown-marcas-clientes {
+  background-color: #000000;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #000000;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.dropdown-content {
+  background-color: #000000f2;
+  min-width: 220px;
+  border-radius: 8px;
+}
+
+.dropdown-marcas-clientes:hover .dropdown-content,
+.dropdown-marcas-clientes:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #537e5f;
+  color: #fff;
+  border-radius: 8px;
 }

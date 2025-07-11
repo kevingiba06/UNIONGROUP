@@ -147,9 +147,7 @@ body {
   width: auto;
   height: auto;
   object-fit: contain;
-  /* 👈 Permite que se reduzca/adapte automáticamente */
   max-height: 300px;
-  /* Ajusta a lo que necesites */
   border-radius: 10px;
 }
  
