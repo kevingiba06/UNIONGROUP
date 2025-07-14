@@ -189,24 +189,83 @@ title p {
   /* Opcional, centra el texto horizontalmente */
 }
 
+/* Línea de tiempo responsiva */
 .timeline-container {
   display: flex;
-  width: auto;
-  height: 100%;
+  flex-direction: row;
+  width: 100vw;
+  max-width: 1200px;
+  height: auto;
   justify-content: center;
-  margin-top: 5%;
-  padding: 25px;
+  margin: 5% auto 0 auto;
+  padding: 25px 2vw;
   gap: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
+@media (max-width: 1024px) {
+  .timeline-container {
+    gap: 10px;
+    padding: 10px 1vw;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    padding: 10px 0;
+    gap: 20px;
+  }
+  .timeline-left, .timeline-right {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .timeline-right img {
+    width: 90vw;
+    height: auto;
+    max-width: 100vw;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container {
+    width: 100vw;
+    padding: 4px 0;
+    gap: 10px;
+  }
+  .timeline-right img {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+/* --- llave eliminada por error de compilación --- */
+
+/* Responsivo para timeline-left */
 .timeline-left {
   width: 50%;
+  min-width: 260px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .timeline-left {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 10px;
+  }
+}
+/* --- llave eliminada por error de compilación --- */
 
 .timeline-year {
   text-align: center;
@@ -247,19 +306,29 @@ title p {
   left: 50%;
 }
 
+/* Responsivo para timeline-right */
 .timeline-right {
   width: 50%;
+  min-width: 260px;
 }
 
+@media (max-width: 768px) {
+  .timeline-right {
+    width: 100%;
+    min-width: unset;
+  }
+}
+/* --- llave eliminada por error de compilación --- */
+
+/* Imagen de la línea de tiempo responsiva */
 .timeline-right img {
-  width: 100vw;
-  height: 100vh;
+  width: 40vw;
+  height: auto;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 60vh;
   border-radius: 10px;
   margin-bottom: 10px;
   object-fit: contain;
-  /* Mantiene la proporción y rellena el div */
   display: block;
 }
 
@@ -279,28 +348,7 @@ title p {
   font-family: 'NTNeussRegular';
 }
 
-@media (max-width: 600px) {
-  .timeline-container {
-    width: 100%;
-  }
-
-  .timeline-left {
-  width: 50%;
-}
-
-  .timeline-right {
-    width: 50%;
-  }
-
-  .timeline-right img {
-    width: 50vw;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    object-fit: contain;
-    display: block;
-  }
-}
+/* El bloque anterior queda cubierto por los nuevos media queries más arriba */
 
 .up {
   width: auto;
@@ -386,13 +434,6 @@ title p {
   flex-direction: column;
 }
 
-@media (max-width: 600px) {
-  .sec-right {
-    margin-left: 0;
-    font-size: 4vw;
-  }
-}
-
 .sec-left {
   width: 50%;
 }
@@ -406,6 +447,24 @@ title p {
   transition: width 0.3s ease, left 0.3s ease;
   color: #666;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .sec-container {
+    width: 100%;
+  }
+
+  .sec-right {
+    width: 50%;
+    margin-left: 0;
+    font-size: 4vw;
+  }
+
+  .sec-left {
+    width: 50%;
+    margin-left: 0;
+    font-size: 4vw;
+  }
 }
 
 .select-title {
