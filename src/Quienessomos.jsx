@@ -220,7 +220,7 @@ function Quienessomos() {
           <p>Alianzas globales, relaciones sólidas</p>
         </div>
         <div className='email'>
-          recursoshumanos@uniongroup.mx
+          pr@uniongroup.mx
         </div>
         <div className='years-logo-container'>
           <span className='year'>1980</span>

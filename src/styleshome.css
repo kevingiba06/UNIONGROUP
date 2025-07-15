@@ -141,6 +141,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .email {
+    font-size: 4.5vw;
+  }
+}
+
 .year {
   font-size: 15px;
   font-weight: bold;

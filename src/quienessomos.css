@@ -189,6 +189,12 @@ title p {
   /* Opcional, centra el texto horizontalmente */
 }
 
+@media (min-width: 600px) {
+  .center_2 {
+    width: 100%;
+  }
+}
+
 /* Línea de tiempo responsiva */
 .timeline-container {
   display: flex;
