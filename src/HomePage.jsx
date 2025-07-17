@@ -198,7 +198,7 @@ function HomePage() {
             </div>
 
             <div className='info-email-logo'>
-                <div className='info'>
+                <div className='info-down'>
                     <p>Alianzas globales, relaciones sólidas</p>
                 </div>
                 <div className='email'>

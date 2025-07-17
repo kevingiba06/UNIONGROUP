@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './quehacemos.css';
 import backIcon from './assets/icons8-atras-48.png';
-import mapa_union from './assets/mapa_union.jpg';
+import mapa_union from './assets/mapa_union_.jpg';
 import rbk from './assets/rbk.png';
 import dc from './assets/dc.png';
 import bbong from './assets/bbong.png';
@@ -84,25 +84,43 @@ function Quehacemos() {
 
         {/* Menú de navegación con clase condicional */}
         <div className={`text ${menuAbierto ? 'mostrar' : ''}`}>
-          <Link to={"/quienes-somos"}>QUIENES SOMOS</Link>
+          <Link to="/quienes-somos" onClick={() => setMenuAbierto(false)}>QUIENES SOMOS</Link>
           {/* Dropdown MARCAS & CLIENTES */}
           <div
             className="dropdown-marcas-clientes"
             onMouseEnter={() => {
-              if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
-              setDropdownOpen(true);
+              if (window.innerWidth >= 769) {
+                if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                setDropdownOpen(true);
+              }
             }}
             onMouseLeave={() => {
-              dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+              if (window.innerWidth >= 769) {
+                dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+              }
             }}
             tabIndex={0}
-            onFocus={() => setDropdownOpen(true)}
+            onFocus={() => {
+              if (window.innerWidth >= 769) setDropdownOpen(true);
+            }}
             onBlur={() => {
-              dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
+              if (window.innerWidth >= 769) dropdownTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
             }}
           >
-            <Link to={"/marcas-clientes"} className="dropdown-toggle">MARCAS & CLIENTES</Link>
-            <div className="dropdown-content" style={{ display: dropdownOpen ? 'block' : 'none' }}>
+            <Link to="/marcas-clientes" onClick={() => setMenuAbierto(false)}>MARCAS & CLIENTES</Link>
+            {/* Dropdown solo visible en desktop al hacer hover/focus, en mobile solo si menú abierto */}
+            <div
+              className="dropdown-content"
+              style={{
+                display:
+                  (window.innerWidth >= 769 && dropdownOpen)
+                    ? 'block'
+                    : (window.innerWidth < 769 && menuAbierto ? 'block' : 'none'),
+                position: window.innerWidth < 769 ? 'static' : 'absolute',
+                background: window.innerWidth < 769 ? 'none' : 'rgba(0, 0, 0, 0.95)',
+                boxShadow: window.innerWidth < 769 ? 'none' : undefined
+              }}
+            >
               {[
                 { nombre: 'JLO Jennifer Lopez', idx: 0 },
                 { nombre: 'YorkTeam Polo Club', idx: 1 },
@@ -113,16 +131,17 @@ function Quehacemos() {
                   key={item.idx}
                   className="dropdown-item"
                   onClick={() => {
+                    setMenuAbierto(false);
                     window.location.href = `/marcas-clientes?promesa=${item.idx}#mp`;
                   }}
-                  style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', width: '100%', textAlign: 'left', padding: '8px 16px' }}
+                  style={{ color: 'white', cursor: 'pointer', textAlign: 'right' }}
                 >
                   {item.nombre}
                 </button>
               ))}
             </div>
           </div>
-          <Link to={"/contacto"}>CONTACTO</Link>
+          <Link to="/contacto" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
           <Link to={"/"}>
             <img src={backIcon} alt="Regresar" className="icon-svg" />
           </Link>
@@ -244,7 +263,7 @@ function Quehacemos() {
       )}
 
       <div className='info-email-logo'>
-        <div className='info'>
+        <div className='info-down'>
           <p>Alianzas globales, relaciones sólidas</p>
         </div>
         <div className='email'>

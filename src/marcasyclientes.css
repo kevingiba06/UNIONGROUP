@@ -94,6 +94,12 @@
   font-weight: lighter;
 }
 
+@media (max-width: 600px) {
+  .marcas {
+    font-size: 20vw
+  }
+}
+
 .info {
   display: flex;
   font-size: 145%;
@@ -291,7 +297,7 @@
     font-size: 0.95rem;
     min-height: unset;
   }
-  .info-email-logo .info,
+  .info-email-logo .info-down,
   .info-email-logo .email,
   .info-email-logo .years-logo-container {
     text-align: center;

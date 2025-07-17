@@ -134,6 +134,13 @@
   text-align: center;
 }
 
+.info-down {
+  font-family: 'Tahoma';
+  color: #fff;
+  font-size: 2vw;
+  text-align: center;
+}
+
 .email {
   font-family: 'Tahoma';
   color: #fff;
@@ -196,13 +203,17 @@
     font-size: 0.95rem;
     min-height: unset;
   }
-  .info-email-logo .info,
+  .info-email-logo .info-down,
   .info-email-logo .email,
   .info-email-logo .years-logo-container {
     text-align: center;
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+
+  .info-email-logo .info-down {
+    font-size: 1.2rem;
   }
 }
 
