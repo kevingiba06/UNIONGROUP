@@ -96,7 +96,7 @@
 
 @media (max-width: 600px) {
   .marcas {
-    font-size: 20vw
+    font-size: 25vw
   }
 }
 
@@ -126,11 +126,39 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  .marcas-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 20px;
+  }
+  .marcas-right {
+    width: 100%;
+    order: 1;
+    height: auto;
+  }
+  .marcas-left {
+    width: 100%;
+    order: 2;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
 .marcas-right {
   width: 50%;
   height: 50%;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .marcas-right {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
 }
 
 .marcas-up {
@@ -145,6 +173,14 @@
   padding: 20px 0;
   gap: 20px;
   position: static;
+}
+
+@media screen and (max-width: 768px) {
+  .marcas-up {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 0.5rem;
+  }
 }
 
 .marcas-down {
@@ -173,6 +209,14 @@
 .marcas-left {
   width: 50%;
   height: 120%;
+}
+
+@media screen and (max-width: 768px) {
+  .marcas-left {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
 }
 
 .marcas-left img {
@@ -239,10 +283,16 @@
 }
 
 .title-white {
-  font-size: 20vh;
+  font-size: 12vw;
   margin: 20px;
   font-family: 'arial';
   font-weight: lighter
+}
+
+@media (max-width: 768px) {
+  .title-white {
+    font-size: 15vw;
+  }
 }
 
 .info-left-down {
@@ -250,6 +300,12 @@
   justify-content: left;
   margin: 20px;
   font-family: 'arial';
+}
+
+@media (max-width: 768px) {
+  .info-left-down {
+    font-size: 7vw;
+  }
 }
 
 .info-right {
