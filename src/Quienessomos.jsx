@@ -196,7 +196,7 @@ function Quienessomos() {
             ))}
           </div>
           <div className='down' data-aos="fade-up">
-            <div className='text cif timeline'>
+            <div className='text cif-timeline'>
               <div className='year title'>
                 {timelineData[selectedTimeline].year}
               </div>
