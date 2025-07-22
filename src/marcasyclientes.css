@@ -317,6 +317,12 @@
   font-family: 'arial';
 }
 
+@media (max-width: 768px) {
+  .info-right {
+    font-size: 4vw;
+  }
+}
+
 /* Ajuste responsivo para info-email-logo */
 .info-email-logo {
   display: flex;
@@ -380,8 +386,20 @@
   font-family: 'arial';
 }
 
+@media (max-width: 768px) {
+  .mp {
+    font-size: 5vw;
+  }
+}
+
 .ps {
   font-size: 10vh;
+}
+
+@media (max-width: 768px) {
+  .ps {
+    font-size: 10vw;
+  }
 }
 
 .logo-promesa {
@@ -488,6 +506,34 @@
   justify-content: center;
   align-items: center;
 
+}
+
+.videos video {
+  width: 80vw;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .videos video {
+    width: 98vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videos video {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+    margin-top: 1rem;
+  }
 }
 
 .clientes-principales {

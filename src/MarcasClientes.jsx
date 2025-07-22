@@ -319,7 +319,7 @@ function MarcasyClientes() {
                 <div className='info-left-down'>Desarrollo — Diseño — Producción Marketing — Distribución</div>
                 <div className='info-right'>
                     <strong>Union Group</strong> ofrece un servicio integral de gestión de marcas conocido como Full Brand Management. Este enfoque abarca todas las facetas del desarrollo y diseño de productos, así como la producción, y distribución de una marca en el mercado.
-                    Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.<br /><br />
+                    Con Full Brand Management, Union Group asegura que cada aspecto de la marca esté cuidadosamente planificado y ejecutado, desde la idea del producto hasta su llegada al consumidor final. Este servicio holístico permite a las marcas optimizar sus estrategias y recursos, garantizando un crecimiento sostenido y una presencia destacada en los tres canales: retail, ecommerce y wholesale.<br />
                 </div>
             </div>
 
@@ -350,7 +350,13 @@ function MarcasyClientes() {
                 </div>
                 <div className='videos'>
                     {promesas[promesaIndex].video && (
-                        <video key={promesas[promesaIndex].video} controls autoPlay width="800vw" style={{ marginTop: '8rem', borderRadius: '12px', maxHeight: '800px', background: '#000' }}>
+                        <video
+                            key={promesas[promesaIndex].video}
+                            controls
+                            autoPlay
+                            muted
+                            playsInline
+                        >
                             <source src={promesas[promesaIndex].video} type="video/mp4" />
                             Tu navegador no soporta la reproducción de video.
                         </video>
