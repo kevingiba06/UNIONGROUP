@@ -349,7 +349,7 @@
 .dropdown-marcas-clientes {
   background-color: #000000;
   position: relative;
-  display: inline-block;
+  display: flex;
 }
 
 .dropdown-toggle {

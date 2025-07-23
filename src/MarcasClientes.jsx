@@ -327,7 +327,7 @@ function MarcasyClientes() {
                 <div className='ps'><br />Las promesas se cumplen<br /></div>
                 <div className='logo-promesa'>
                     <div className='logo-promesa-left'>
-                        <img src={promesas[promesaIndex].logo} alt="Logo promesa" style={{ height: '12vh' }} />
+                        <img src={promesas[promesaIndex].logo} alt="Logo promesa" />
                     </div>
                     <div className='logo-promesa-center'>
                         <span>{promesas[promesaIndex].texto}</span>

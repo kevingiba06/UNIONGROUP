@@ -32,16 +32,8 @@
   vertical-align: middle;
 }
 
-.text {
-  display: none;
-  gap: 60px;
-  /* ← espacio entre los <a> */
-  color: #fff;
-  font-size: 1.5rem;
-}
 
 .text.cif {
-  display: flex;
   color: #fff;
   font-size: 1.8rem;
 }
@@ -94,6 +86,17 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+  }
+
+  /* Ensure .text.cif inside .center_2 is always visible on mobile */
+  .center_2 .text.cif {
+    display: block !important;
+    color: #fff;
+    font-size: 1.8rem;
+    background: none;
+    position: static;
+    padding: 0;
+    text-align: center;
   }
 }
 
@@ -191,27 +194,58 @@ title p {
   margin-left: 5%;
 }
 
+
 .center_2 {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  height: auto;
+  justify-content: center;
+  width: 98vw;
   margin: 8% auto;
-  gap: 50%;
+  gap: 16px;
+}
+
+.center_2 .text.cif,
+.center_2 .texto {
+  width: 50%;
+  min-width: 120px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  .center_2 {
+    width: 90%;
+    gap: 50px;
+  }
+  .center_2 .text.cif,
+  .center_2 .texto {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .center_2 {
+    width: 100vw;
+    gap: 4px;
+  }
+  .center_2 .text.cif,
+  .center_2 .texto {
+    font-size: 1rem;
+    min-width: 90px;
+    padding: 0 2vw;
+  }
 }
 
 .tex.cif {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  /* Opcional, centra el texto horizontalmente */
-}
-
-@media (min-width: 600px) {
-  .center_2 {
-    width: 100%;
-  }
 }
 
 /* Línea de tiempo responsiva */
@@ -449,7 +483,9 @@ title p {
     gap: 15px;
     padding: 10px 0;
   }
-  .sec-left, .sec-right {
+
+  .sec-left,
+  .sec-right {
     width: 100%;
     font-size: 4vw;
     align-items: center;
@@ -464,11 +500,14 @@ title p {
     gap: 10px;
     padding: 4px 0;
   }
-  .sec-left, .sec-right {
+
+  .sec-left,
+  .sec-right {
     width: 100%;
     font-size: 5vw;
     padding: 0 2vw;
   }
+
   .sec-left {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -476,6 +515,7 @@ title p {
     justify-content: flex-start;
     align-items: center;
   }
+
   .select-title {
     min-width: 120px;
     width: auto;
