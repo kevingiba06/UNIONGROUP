@@ -88,6 +88,8 @@
   align-items: center;
   width: 100%;
   font-family: 'arial';
+  justify-content: center;
+  align-items: center;
 }
 
 .contacto-left {
@@ -124,12 +126,14 @@
 .form-contacto button {
   padding: 0.7rem;
   border-radius: 6px;
-  border: none;
   background: #537e5f;
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.2s;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .form-contacto button:hover {
