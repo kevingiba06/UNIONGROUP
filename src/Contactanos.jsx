@@ -106,7 +106,7 @@ function Contacto() {
                             <input type='Apellido' name='email' required />
                         </label>
                         <label>Email:
-                            <textarea name='Email' rows='4' required></textarea>
+                            <input name='Email' rows='4' required></input>
                         </label>
                         <label>Mensaje:
                             <textarea name='mensaje' rows='4' required></textarea>
